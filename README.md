@@ -1,4 +1,4 @@
-# DROP PRECDICTION
+# DROP PREDICTION
 # 🎓 EduSense — AI-Powered Student Dropout Prediction
 
 
