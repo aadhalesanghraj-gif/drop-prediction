@@ -4,9 +4,6 @@
 
 **Predict student dropout risk before it's too late — powered by Machine Learning.**
 
-[🚀 Live Demo](#getting-started) · [📊 Features](#features) · [🛠️ Tech Stack](#tech-stack) · [📁 Project Structure](#project-structure)
-
-</div>
 
 ---
 
@@ -42,17 +39,17 @@
 
 ### 📤 Upload Screen
 > Drag-and-drop CSV upload interface
-> <img width="1585" height="797" alt="image" src="https://github.com/user-attachments/assets/6929e9f2-1d75-4cab-a433-5bb0d32d45b5" />
+> <img width="1300" height="500" alt="image" src="https://github.com/user-attachments/assets/6929e9f2-1d75-4cab-a433-5bb0d32d45b5" />
 
 
 ### 📊 Dashboard
 > 5 animated stat cards → Risk distribution donut chart → Feature importance bars → Department-wise chart → Top at-risk students list
-> <img width="1805" height="910" alt="image" src="https://github.com/user-attachments/assets/069341f6-fcb7-4b53-ab42-e54dd97641d9" />
+> <img width="1350" height="500" alt="image" src="https://github.com/user-attachments/assets/069341f6-fcb7-4b53-ab42-e54dd97641d9" />
 
 
 ### 🔍 Individual Student Explanation
 > Click any student to open a detailed modal with contributing factor analysis and intervention recommendation
-> <img width="706" height="684" alt="image" src="https://github.com/user-attachments/assets/91995086-6bf2-4f5a-ae5b-1f5d77b3effd" />
+> <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/91995086-6bf2-4f5a-ae5b-1f5d77b3effd" />
 
 
 ---
