@@ -51,8 +51,6 @@
       .hidden {
         display: none !important;
       }
-
-      /* BG */
       .bg-grid {
         position: fixed;
         inset: 0;
@@ -103,14 +101,11 @@
           transform: translateY(-30px);
         }
       }
-
       .screen {
         position: relative;
         z-index: 1;
         min-height: 100vh;
       }
-
-      /* LOGO */
       .logo {
         font-family: var(--font-d);
         font-size: 1.4rem;
@@ -140,7 +135,7 @@
         }
       }
 
-      /* ===== LANDING ===== */
+      /* LANDING */
       #landing-screen {
         display: flex;
         flex-direction: column;
@@ -152,23 +147,6 @@
         padding: 1.4rem 4rem;
         position: relative;
         z-index: 10;
-      }
-      .land-gs-btn {
-        background: linear-gradient(135deg, var(--accent), var(--accent2));
-        color: #fff;
-        border: none;
-        padding: 0.55rem 1.4rem;
-        border-radius: 8px;
-        font-family: var(--font-b);
-        font-size: 0.9rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s;
-        box-shadow: 0 4px 16px rgba(79, 142, 247, 0.3);
-      }
-      .land-gs-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(79, 142, 247, 0.4);
       }
       .land-hero {
         flex: 1;
@@ -216,15 +194,6 @@
         font-weight: 700;
         letter-spacing: -2px;
       }
-      .land-desc {
-        font-size: 1.1rem;
-        color: var(--muted);
-        max-width: 540px;
-        line-height: 1.8;
-        font-weight: 300;
-        margin-bottom: 3rem;
-        animation: fadedown 0.6s ease 0.2s both;
-      }
       .land-cta-row {
         display: flex;
         align-items: center;
@@ -261,21 +230,6 @@
       .land-cta-primary:hover svg {
         transform: translateX(4px);
       }
-      .land-cta-secondary {
-        background: transparent;
-        border: 1px solid var(--border2);
-        color: var(--text);
-        padding: 0.9rem 2rem;
-        border-radius: 12px;
-        font-family: var(--font-b);
-        font-size: 1rem;
-        cursor: pointer;
-        transition: all 0.2s;
-      }
-      .land-cta-secondary:hover {
-        border-color: var(--accent);
-        color: var(--accent);
-      }
       .land-stats {
         display: flex;
         gap: 3rem;
@@ -303,71 +257,6 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
       }
-      .land-features {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        max-width: 900px;
-        margin: 4rem auto 0;
-        padding: 0 2rem;
-        animation: fadedown 0.6s ease 0.5s both;
-      }
-      .land-feat {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 1.4rem;
-        text-align: left;
-        transition: all 0.25s;
-      }
-      .land-feat:hover {
-        border-color: var(--border2);
-        transform: translateY(-3px);
-      }
-      .land-feat-ico {
-        font-size: 1.5rem;
-        margin-bottom: 0.7rem;
-      }
-      .land-feat-title {
-        font-family: var(--font-d);
-        font-size: 0.95rem;
-        font-weight: 700;
-        margin-bottom: 0.4rem;
-      }
-      .land-feat-desc {
-        font-size: 0.82rem;
-        color: var(--muted);
-        line-height: 1.6;
-      }
-      .land-line {
-        position: absolute;
-        pointer-events: none;
-        opacity: 0.15;
-      }
-      .land-line-1 {
-        top: 20%;
-        left: 5%;
-        width: 200px;
-        height: 1px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          var(--accent),
-          transparent
-        );
-      }
-      .land-line-2 {
-        top: 60%;
-        right: 5%;
-        width: 150px;
-        height: 1px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          var(--accent2),
-          transparent
-        );
-      }
       @keyframes fadedown {
         from {
           opacity: 0;
@@ -388,7 +277,7 @@
         }
       }
 
-      /* ===== UPLOAD NAV ===== */
+      /* NAV */
       .nav {
         display: flex;
         align-items: center;
@@ -410,11 +299,11 @@
         background: var(--surface);
       }
 
-      /* ===== HERO / UPLOAD ===== */
+      /* UPLOAD */
       .hero {
         max-width: 820px;
         margin: 0 auto;
-        padding: 5rem 2rem 4rem;
+        padding: 4rem 2rem 3rem;
         text-align: center;
       }
       .hero-badge {
@@ -452,9 +341,48 @@
         color: var(--muted);
         line-height: 1.7;
         max-width: 520px;
-        margin: 0 auto 3rem;
+        margin: 0 auto 2.5rem;
         font-weight: 300;
       }
+
+      /* TABS SWITCHER */
+      .input-switcher {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 0.35rem;
+        margin-bottom: 2rem;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .sw-btn {
+        background: transparent;
+        border: none;
+        color: var(--muted);
+        font-family: var(--font-b);
+        font-size: 0.88rem;
+        font-weight: 500;
+        padding: 0.45rem 1.2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+        white-space: nowrap;
+      }
+      .sw-btn.active {
+        color: var(--text);
+        background: var(--surface2);
+        border: 1px solid var(--border2);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+      .sw-btn:hover:not(.active) {
+        color: var(--text);
+      }
+
+      /* UPLOAD ZONE */
       .upload-zone {
         border: 2px dashed var(--border2);
         border-radius: var(--r);
@@ -584,7 +512,165 @@
         box-shadow: 0 8px 30px rgba(79, 142, 247, 0.45);
       }
 
-      /* ===== LOADING ===== */
+      /* MANUAL INPUT */
+      .manual-section {
+        width: 100%;
+        max-width: 820px;
+        margin: 0 auto;
+      }
+      .manual-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.2rem;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+      .manual-toolbar-left {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+      }
+      .add-row-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: rgba(79, 142, 247, 0.1);
+        border: 1px solid rgba(79, 142, 247, 0.25);
+        color: var(--accent);
+        padding: 0.45rem 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: var(--font-b);
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      .add-row-btn:hover {
+        background: rgba(79, 142, 247, 0.18);
+      }
+      .clear-btn {
+        background: rgba(239, 68, 68, 0.07);
+        border: 1px solid rgba(239, 68, 68, 0.2);
+        color: var(--high);
+        padding: 0.45rem 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: var(--font-b);
+        font-size: 0.85rem;
+        transition: all 0.2s;
+      }
+      .clear-btn:hover {
+        background: rgba(239, 68, 68, 0.14);
+      }
+      .manual-count {
+        font-size: 0.82rem;
+        color: var(--muted);
+        padding: 0.3rem 0.7rem;
+        background: var(--surface2);
+        border-radius: 6px;
+        border: 1px solid var(--border);
+      }
+      .manual-table-wrap {
+        overflow-x: auto;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+      }
+      .manual-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--surface);
+        border-radius: 12px;
+        overflow: hidden;
+        min-width: 760px;
+      }
+      .manual-table th {
+        background: var(--surface2);
+        padding: 0.7rem 0.9rem;
+        text-align: left;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: var(--muted);
+        font-weight: 600;
+        border-bottom: 1px solid var(--border);
+        white-space: nowrap;
+      }
+      .manual-table td {
+        padding: 0.45rem 0.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .manual-table tr:last-child td {
+        border-bottom: none;
+      }
+      .mi {
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        color: var(--text);
+        padding: 0.4rem 0.6rem;
+        border-radius: 6px;
+        font-family: var(--font-b);
+        font-size: 0.83rem;
+        width: 100%;
+        outline: none;
+        transition: border-color 0.2s;
+        min-width: 70px;
+      }
+      .mi:focus {
+        border-color: var(--accent);
+      }
+      .mi.err {
+        border-color: var(--high) !important;
+      }
+      .mi-sel {
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        color: var(--text);
+        padding: 0.4rem 0.5rem;
+        border-radius: 6px;
+        font-family: var(--font-b);
+        font-size: 0.82rem;
+        outline: none;
+        width: 100%;
+        cursor: pointer;
+        min-width: 80px;
+      }
+      .mi-sel:focus {
+        border-color: var(--accent);
+      }
+      .del-row-btn {
+        background: rgba(239, 68, 68, 0.08);
+        border: 1px solid rgba(239, 68, 68, 0.18);
+        color: var(--high);
+        padding: 0.3rem 0.55rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        transition: all 0.2s;
+        line-height: 1;
+      }
+      .del-row-btn:hover {
+        background: rgba(239, 68, 68, 0.18);
+      }
+      .manual-actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+      }
+      .template-hint {
+        margin-top: 1rem;
+        font-size: 0.78rem;
+        color: var(--muted);
+        text-align: center;
+      }
+      .template-hint a {
+        color: var(--accent);
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      /* LOADING */
       #loading-screen {
         display: flex;
         align-items: center;
@@ -680,7 +766,7 @@
         transition: width 0.4s ease;
       }
 
-      /* ===== DASH NAV ===== */
+      /* DASHBOARD NAV */
       .dash-nav {
         display: flex;
         align-items: center;
@@ -734,7 +820,7 @@
         color: var(--accent);
       }
 
-      /* ===== DASH CONTENT ===== */
+      /* DASH CONTENT */
       .tab-pane {
         padding: 2rem 3rem;
         max-width: 1400px;
@@ -765,7 +851,7 @@
         padding-top: 0.5rem;
       }
 
-      /* ===== STAT CARDS ===== */
+      /* STAT CARDS */
       .stats-grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -786,6 +872,7 @@
           transform 0.2s,
           border-color 0.2s;
         animation: slideup 0.4s ease both;
+        cursor: pointer;
       }
       .stat-card:hover {
         transform: translateY(-3px);
@@ -887,17 +974,8 @@
       .s-ind .stat-ring {
         border-color: var(--ind);
       }
-      .stat-card[onclick]:hover::after {
-        content: "Click to filter →";
-        position: absolute;
-        bottom: 0.5rem;
-        right: 0.7rem;
-        font-size: 0.65rem;
-        color: var(--muted);
-        opacity: 0.7;
-      }
 
-      /* ===== BADGES ===== */
+      /* BADGES */
       .badge {
         font-size: 0.72rem;
         font-weight: 600;
@@ -927,7 +1005,7 @@
         border: 1px solid rgba(168, 85, 247, 0.2);
       }
 
-      /* ===== CHARTS ===== */
+      /* CHARTS */
       .charts-row {
         display: grid;
         grid-template-columns: 280px 1fr;
@@ -1052,8 +1130,6 @@
         width: 55px;
         flex-shrink: 0;
       }
-
-      /* ===== TOP RISK ===== */
       .preview-card {
         background: var(--surface);
         border: 1px solid var(--border);
@@ -1126,7 +1202,7 @@
         text-align: right;
       }
 
-      /* ===== TABLE ===== */
+      /* TABLE */
       .search-row {
         display: flex;
         gap: 0.8rem;
@@ -1223,7 +1299,7 @@
         background: rgba(79, 142, 247, 0.2);
       }
 
-      /* ===== INSIGHTS ===== */
+      /* INSIGHTS */
       .insights-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1284,7 +1360,7 @@
         color: var(--muted);
       }
 
-      /* ===== EXPLAINER MODAL ===== */
+      /* MODAL */
       .exp-modal {
         position: fixed;
         inset: 0;
@@ -1396,7 +1472,7 @@
         line-height: 1.5;
       }
 
-      /* ===== TOAST ===== */
+      /* TOAST */
       .toast {
         position: fixed;
         bottom: 2rem;
@@ -1420,6 +1496,14 @@
         color: var(--high);
         cursor: pointer;
         font-size: 1rem;
+      }
+      .toast.success {
+        background: #0a1a0f;
+        border-color: rgba(16, 185, 129, 0.4);
+        color: var(--low);
+      }
+      .toast.success button {
+        color: var(--low);
       }
       @keyframes toastin {
         from {
@@ -1458,12 +1542,6 @@
         .hero {
           padding: 3rem 1.5rem;
         }
-        .land-features {
-          grid-template-columns: 1fr;
-        }
-        .land-stats {
-          gap: 1.5rem;
-        }
       }
       ::-webkit-scrollbar {
         width: 6px;
@@ -1484,15 +1562,12 @@
     <div class="orb orb2"></div>
     <div class="orb orb3"></div>
 
-    <!-- ===== LANDING ===== -->
+    <!-- LANDING -->
     <div class="screen" id="landing-screen">
       <nav class="land-nav">
         <div class="logo"><span class="logo-dot"></span>EduSense</div>
-        
       </nav>
       <div class="land-hero">
-        <div class="land-line land-line-1"></div>
-        <div class="land-line land-line-2"></div>
         <div class="land-eyebrow">
           <span class="land-eyebrow-dot"></span>AI-Powered Early Warning System
         </div>
@@ -1501,7 +1576,6 @@
             >Before It Starts.</span
           >
         </h1>
-       
         <div class="land-cta-row">
           <button class="land-cta-primary" onclick="goToUpload()">
             <span>Get Started</span>
@@ -1514,14 +1588,12 @@
               <path d="M5 12h14m-7-7l7 7-7 7" />
             </svg>
           </button>
-        
         </div>
         <div class="land-stats">
           <div class="land-stat">
             <div class="land-stat-num">98%</div>
             <div class="land-stat-lbl">Prediction Accuracy</div>
           </div>
-           
           <div class="land-stat">
             <div class="land-stat-num">&lt;2s</div>
             <div class="land-stat-lbl">Analysis Time</div>
@@ -1531,13 +1603,10 @@
             <div class="land-stat-lbl">Students Per Upload</div>
           </div>
         </div>
-         
-          </div>
-        </div>
       </div>
     </div>
 
-    <!-- ===== UPLOAD ===== -->
+    <!-- UPLOAD -->
     <div class="screen hidden" id="upload-screen">
       <nav class="nav">
         <div class="logo"><span class="logo-dot"></span>EduSense</div>
@@ -1550,57 +1619,141 @@
           ><br />Before It Happens
         </h1>
         <p class="hero-sub">
-          Upload your student CSV and get instant AI-driven risk scores,
-          probability analysis, department distribution, and individual student
-          explanations.
+          Upload a CSV batch or manually enter individual student data for
+          instant AI-driven risk analysis.
         </p>
-        <div class="upload-zone" id="upload-zone">
-          <div class="upload-inner">
-            <div class="upload-icon">
+
+        <!-- MODE SWITCHER -->
+        <div class="input-switcher">
+          <button class="sw-btn active" id="sw-csv" onclick="switchMode('csv')">
+            📁 CSV Upload
+          </button>
+          <button class="sw-btn" id="sw-manual" onclick="switchMode('manual')">
+            ✏️ Manual Entry
+          </button>
+        </div>
+
+        <!-- CSV MODE -->
+        <div id="mode-csv">
+          <div class="upload-zone" id="upload-zone">
+            <div class="upload-inner">
+              <div class="upload-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                  />
+                </svg>
+              </div>
+              <p class="upload-title">Drop your CSV file here</p>
+              <p class="upload-sub">or click to browse</p>
+              <input type="file" id="csv-input" accept=".csv" hidden />
+              <button
+                class="upload-btn"
+                onclick="document.getElementById('csv-input').click()"
+              >
+                Choose File
+              </button>
+              <p class="upload-hint">
+                Required: Student_ID · Attendance · Internal_Marks ·
+                Semester_Result · Fee_Pending · LMS_Usage · Scholarship ·
+                Backlogs
+              </p>
+            </div>
+          </div>
+          <div class="file-info hidden" id="file-info">
+            <span class="file-name" id="file-name-display"></span>
+            <button class="analyze-btn" onclick="uploadAndPredict()">
+              <span>Run Analysis</span>
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="1.5"
+                stroke-width="2"
               >
-                <path
-                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
-                />
+                <path d="M5 12h14m-7-7l7 7-7 7" />
               </svg>
-            </div>
-            <p class="upload-title">Drop your CSV file here</p>
-            <p class="upload-sub">or click to browse</p>
-            <input type="file" id="csv-input" accept=".csv" hidden />
-            <button
-              class="upload-btn"
-              onclick="document.getElementById('csv-input').click()"
-            >
-              Choose File
             </button>
-            <p class="upload-hint">
-              Required: Student_ID · Attendance · Internal_Marks ·
-              Semester_Result · Fee_Pending · LMS_Usage · Scholarship · Backlogs
-            </p>
           </div>
         </div>
-        <div class="file-info hidden" id="file-info">
-          <span class="file-name" id="file-name-display"></span>
-          <button class="analyze-btn" onclick="uploadAndPredict()">
-            <span>Run Analysis</span>
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
+
+        <!-- MANUAL MODE -->
+        <div id="mode-manual" class="hidden manual-section">
+          <div class="manual-toolbar">
+            <div class="manual-toolbar-left">
+              <button class="add-row-btn" onclick="addManualRow()">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M12 5v14m-7-7h14" />
+                </svg>
+                Add Student
+              </button>
+              <button class="clear-btn" onclick="clearManual()">
+                Clear All
+              </button>
+            </div>
+            <span class="manual-count" id="manual-count">0 students</span>
+          </div>
+
+          <div class="manual-table-wrap">
+            <table class="manual-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Student ID</th>
+                  <th>Attendance %</th>
+                  <th>Internal Marks</th>
+                  <th>Backlogs</th>
+                  <th>Fee Pending (₹)</th>
+                  <th>LMS Usage</th>
+                  <th>Semester Result</th>
+                  <th>Scholarship</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="manual-tbody"></tbody>
+            </table>
+          </div>
+
+          <p class="template-hint">
+            Need a starting point?
+            <a onclick="loadSampleData()">Load sample data</a> ·
+            <a onclick="addBulkRows()">Add 5 rows at once</a>
+          </p>
+
+          <div class="manual-actions">
+            <button
+              class="analyze-btn"
+              onclick="runManualAnalysis()"
+              id="manual-analyze-btn"
+              style="opacity: 0.5; pointer-events: none"
             >
-              <path d="M5 12h14m-7-7l7 7-7 7" />
-            </svg>
-          </button>
+              <span>Analyze Students</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14m-7-7l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- ===== LOADING ===== -->
+    <!-- LOADING -->
     <div class="screen hidden" id="loading-screen">
       <div class="loading-center">
         <div class="dna-strand">
@@ -1615,7 +1768,7 @@
       </div>
     </div>
 
-    <!-- ===== DASHBOARD ===== -->
+    <!-- DASHBOARD -->
     <div class="screen hidden" id="dashboard-screen">
       <nav class="dash-nav">
         <div class="logo"><span class="logo-dot"></span>EduSense</div>
@@ -1643,11 +1796,7 @@
           <div class="timestamp" id="timestamp"></div>
         </div>
         <div class="stats-grid">
-          <div
-            class="stat-card s-total"
-            onclick="filterByRisk('')"
-            style="cursor: pointer"
-          >
+          <div class="stat-card s-total" onclick="filterByRisk('')">
             <div class="stat-ico">👥</div>
             <div>
               <p class="stat-lbl">Total Students</p>
@@ -1655,11 +1804,7 @@
             </div>
             <div class="stat-ring"></div>
           </div>
-          <div
-            class="stat-card s-high"
-            onclick="filterByRisk('High Risk')"
-            style="cursor: pointer"
-          >
+          <div class="stat-card s-high" onclick="filterByRisk('High Risk')">
             <div class="stat-ico">🔴</div>
             <div>
               <p class="stat-lbl">High Risk</p>
@@ -1667,11 +1812,7 @@
             </div>
             <div class="stat-ring"></div>
           </div>
-          <div
-            class="stat-card s-med"
-            onclick="filterByRisk('Medium Risk')"
-            style="cursor: pointer"
-          >
+          <div class="stat-card s-med" onclick="filterByRisk('Medium Risk')">
             <div class="stat-ico">🟡</div>
             <div>
               <p class="stat-lbl">Medium Risk</p>
@@ -1679,11 +1820,7 @@
             </div>
             <div class="stat-ring"></div>
           </div>
-          <div
-            class="stat-card s-low"
-            onclick="filterByRisk('Low Risk')"
-            style="cursor: pointer"
-          >
+          <div class="stat-card s-low" onclick="filterByRisk('Low Risk')">
             <div class="stat-ico">🟢</div>
             <div>
               <p class="stat-lbl">Low Risk</p>
@@ -1694,7 +1831,6 @@
           <div
             class="stat-card s-ind"
             onclick="filterByRisk('Independent Performer')"
-            style="cursor: pointer"
           >
             <div class="stat-ico">⭐</div>
             <div>
@@ -1869,8 +2005,10 @@
     <script>
       let allStudents = [];
       let featData = [];
+      let manualRows = [];
+      let rowCounter = 1;
 
-      // DRAG & DROP
+      // ===== DRAG & DROP =====
       const zone = document.getElementById("upload-zone");
       const inp = document.getElementById("csv-input");
       zone.addEventListener("click", () => inp.click());
@@ -1899,7 +2037,328 @@
         document.getElementById("file-info").classList.remove("hidden");
       }
 
-      // UPLOAD + PREDICT
+      // ===== MODE SWITCHER =====
+      function switchMode(mode) {
+        document
+          .getElementById("mode-csv")
+          .classList.toggle("hidden", mode !== "csv");
+        document
+          .getElementById("mode-manual")
+          .classList.toggle("hidden", mode !== "manual");
+        document
+          .getElementById("sw-csv")
+          .classList.toggle("active", mode === "csv");
+        document
+          .getElementById("sw-manual")
+          .classList.toggle("active", mode === "manual");
+        if (mode === "manual" && manualRows.length === 0) addManualRow();
+      }
+
+      // ===== MANUAL ROWS =====
+      function addManualRow(prefill) {
+        const id = rowCounter++;
+        manualRows.push(id);
+        const p = prefill || {};
+        const row = document.createElement("tr");
+        row.id = "mrow-" + id;
+        row.innerHTML = `
+          <td style="color:var(--muted);font-size:.78rem;text-align:center;width:32px">${manualRows.length}</td>
+          <td><input class="mi" id="sid-${id}" type="text" placeholder="STU${String(id).padStart(3, "0")}" value="${p.sid || ""}" oninput="updateAnalyzeBtn()"/></td>
+          <td><input class="mi" id="att-${id}" type="number" min="0" max="100" placeholder="75" value="${p.att || ""}" oninput="updateAnalyzeBtn()"/></td>
+          <td><input class="mi" id="marks-${id}" type="number" min="0" max="100" placeholder="60" value="${p.marks || ""}"/></td>
+          <td><input class="mi" id="bl-${id}" type="number" min="0" max="20" placeholder="0" value="${p.bl || ""}"/></td>
+          <td><input class="mi" id="fee-${id}" type="number" min="0" placeholder="0" value="${p.fee || ""}"/></td>
+          <td>
+            <select class="mi-sel" id="lms-${id}">
+              <option value="High" ${p.lms === "High" ? "selected" : ""}>High</option>
+              <option value="Medium" ${p.lms === "Medium" ? "selected" : !p.lms ? "selected" : ""}>Medium</option>
+              <option value="Low" ${p.lms === "Low" ? "selected" : ""}>Low</option>
+            </select>
+          </td>
+          <td>
+            <select class="mi-sel" id="sem-${id}">
+              <option value="Pass" ${p.sem === "Pass" ? "selected" : !p.sem ? "selected" : ""}>Pass</option>
+              <option value="Fail" ${p.sem === "Fail" ? "selected" : ""}>Fail</option>
+              <option value="Pending" ${p.sem === "Pending" ? "selected" : ""}>Pending</option>
+            </select>
+          </td>
+          <td>
+            <select class="mi-sel" id="sch-${id}">
+              <option value="No" ${p.sch === "No" ? "selected" : !p.sch ? "selected" : ""}>No</option>
+              <option value="Yes" ${p.sch === "Yes" ? "selected" : ""}>Yes</option>
+            </select>
+          </td>
+          <td><button class="del-row-btn" onclick="deleteManualRow(${id})">✕</button></td>`;
+        document.getElementById("manual-tbody").appendChild(row);
+        updateManualCount();
+        updateAnalyzeBtn();
+      }
+
+      function deleteManualRow(id) {
+        manualRows = manualRows.filter((r) => r !== id);
+        const el = document.getElementById("mrow-" + id);
+        if (el) el.remove();
+        renumberRows();
+        updateManualCount();
+        updateAnalyzeBtn();
+      }
+
+      function renumberRows() {
+        manualRows.forEach((id, i) => {
+          const row = document.getElementById("mrow-" + id);
+          if (row) row.querySelector("td:first-child").textContent = i + 1;
+        });
+      }
+
+      function clearManual() {
+        manualRows = [];
+        document.getElementById("manual-tbody").innerHTML = "";
+        rowCounter = 1;
+        updateManualCount();
+        updateAnalyzeBtn();
+      }
+
+      function addBulkRows() {
+        for (let i = 0; i < 5; i++) addManualRow();
+      }
+
+      function updateManualCount() {
+        const n = manualRows.length;
+        document.getElementById("manual-count").textContent =
+          n + " student" + (n !== 1 ? "s" : "");
+      }
+
+      function updateAnalyzeBtn() {
+        const btn = document.getElementById("manual-analyze-btn");
+        const hasData = manualRows.some((id) => {
+          const sid = document.getElementById("sid-" + id)?.value.trim();
+          const att = document.getElementById("att-" + id)?.value.trim();
+          return sid && att;
+        });
+        btn.style.opacity = manualRows.length > 0 && hasData ? "1" : "0.5";
+        btn.style.pointerEvents =
+          manualRows.length > 0 && hasData ? "auto" : "none";
+      }
+
+      function loadSampleData() {
+        clearManual();
+        const samples = [
+          {
+            sid: "STU101",
+            att: "42",
+            marks: "38",
+            bl: "4",
+            fee: "15000",
+            lms: "Low",
+            sem: "Fail",
+            sch: "No",
+          },
+          {
+            sid: "STU102",
+            att: "91",
+            marks: "85",
+            bl: "0",
+            fee: "0",
+            lms: "High",
+            sem: "Pass",
+            sch: "Yes",
+          },
+          {
+            sid: "STU103",
+            att: "55",
+            marks: "52",
+            bl: "2",
+            fee: "8000",
+            lms: "Medium",
+            sem: "Pass",
+            sch: "No",
+          },
+          {
+            sid: "STU104",
+            att: "30",
+            marks: "28",
+            bl: "6",
+            fee: "22000",
+            lms: "Low",
+            sem: "Fail",
+            sch: "No",
+          },
+          {
+            sid: "STU105",
+            att: "78",
+            marks: "71",
+            bl: "1",
+            fee: "3000",
+            lms: "High",
+            sem: "Pass",
+            sch: "Yes",
+          },
+        ];
+        samples.forEach((s) => addManualRow(s));
+        showToast("Sample data loaded!", "success");
+      }
+
+      // ===== MANUAL ANALYSIS =====
+      function collectManualData() {
+        const errors = [];
+        const students = manualRows.map((id, idx) => {
+          const sid =
+            document.getElementById("sid-" + id)?.value.trim() ||
+            "STU" + (idx + 1);
+          const att =
+            parseFloat(document.getElementById("att-" + id)?.value) || 0;
+          const marks =
+            parseFloat(document.getElementById("marks-" + id)?.value) || 60;
+          const bl = parseInt(document.getElementById("bl-" + id)?.value) || 0;
+          const fee =
+            parseFloat(document.getElementById("fee-" + id)?.value) || 0;
+          const lms = document.getElementById("lms-" + id)?.value || "Medium";
+          const sem = document.getElementById("sem-" + id)?.value || "Pass";
+          const sch = document.getElementById("sch-" + id)?.value || "No";
+
+          if (att < 0 || att > 100) {
+            document.getElementById("att-" + id)?.classList.add("err");
+            errors.push("Row " + (idx + 1) + ": Attendance must be 0–100");
+          } else document.getElementById("att-" + id)?.classList.remove("err");
+
+          return {
+            Student_ID: sid,
+            Attendance: att,
+            Internal_Marks: marks,
+            Backlogs: bl,
+            Fee_Pending: fee,
+            LMS_Usage: lms,
+            Semester_Result: sem,
+            Scholarship: sch === "Yes" ? 1 : 0,
+          };
+        });
+        return { students, errors };
+      }
+
+      async function runManualAnalysis() {
+        const { students, errors } = collectManualData();
+        if (errors.length) {
+          showToast(errors[0]);
+          return;
+        }
+        showScreen("loading-screen");
+        animateBar();
+        setMsg("Processing " + students.length + " student(s)...");
+
+        // Try Flask backend first, fallback to client-side simulation
+        try {
+          const csvContent = buildCSV(students);
+          const blob = new Blob([csvContent], { type: "text/csv" });
+          const file = new File([blob], "manual_input.csv", {
+            type: "text/csv",
+          });
+          const fd = new FormData();
+          fd.append("file", file);
+          setMsg("Sending to model...");
+          const res = await fetch("/predict", { method: "POST", body: fd });
+          const data = await res.json();
+          if (data.error) throw new Error(data.error);
+          await sleep(300);
+          populate(data);
+          showScreen("dashboard-screen");
+        } catch (e) {
+          // Client-side simulation fallback
+          setMsg("Running local prediction...");
+          await sleep(600);
+          const simData = simulatePrediction(students);
+          populate(simData);
+          showScreen("dashboard-screen");
+          showToast(
+            "Using simulation (Flask offline). Results are estimated.",
+            "success",
+          );
+        }
+      }
+
+      function buildCSV(students) {
+        const header =
+          "Student_ID,Attendance,Internal_Marks,Backlogs,Fee_Pending,LMS_Usage,Semester_Result,Scholarship";
+        const rows = students.map(
+          (s) =>
+            `${s.Student_ID},${s.Attendance},${s.Internal_Marks},${s.Backlogs},${s.Fee_Pending},${s.LMS_Usage},${s.Semester_Result},${s.Scholarship}`,
+        );
+        return [header, ...rows].join("\n");
+      }
+
+      // Simulation model (when Flask is offline)
+      function simulatePrediction(students) {
+        const FEAT_IMPORTANCE = [
+          { Feature: "Attendance", Importance: 28.4 },
+          { Feature: "Backlogs", Importance: 22.1 },
+          { Feature: "Fee Pending", Importance: 18.7 },
+          { Feature: "Semester Result", Importance: 14.2 },
+          { Feature: "LMS Usage", Importance: 9.8 },
+          { Feature: "Internal Marks", Importance: 4.6 },
+          { Feature: "Scholarship", Importance: 2.2 },
+        ];
+
+        const lmsMap = { High: 85, Medium: 50, Low: 15 };
+        const result = students.map((s, idx) => {
+          const lmsNum = lmsMap[s.LMS_Usage] || 50;
+          // Weighted risk score
+          let score = 0;
+          score += (100 - s.Attendance) * 0.3;
+          score += Math.min(s.Backlogs * 8, 40) * 0.22;
+          score += Math.min(s.Fee_Pending / 500, 40) * 0.19;
+          score +=
+            (s.Semester_Result === "Fail"
+              ? 30
+              : s.Semester_Result === "Pending"
+                ? 15
+                : 0) * 0.14;
+          score += (100 - lmsNum) * 0.1;
+          score += (100 - s.Internal_Marks) * 0.05;
+          score -= s.Scholarship * 10;
+          score = Math.max(5, Math.min(96, score + (Math.random() * 6 - 3)));
+
+          let risk;
+          const isIndependent =
+            s.Attendance < 60 && s.Internal_Marks > 75 && s.Backlogs === 0;
+          if (isIndependent) risk = "Independent Performer";
+          else if (score >= 62) risk = "High Risk";
+          else if (score >= 38) risk = "Medium Risk";
+          else risk = "Low Risk";
+
+          return {
+            Student_ID: isNaN(s.Student_ID)
+              ? idx + 101
+              : Number(s.Student_ID.toString().replace(/\D/g, "")) || idx + 101,
+            _sid_label: s.Student_ID,
+            Attendance: s.Attendance,
+            Internal_Marks: s.Internal_Marks,
+            Backlogs: s.Backlogs,
+            Fee_Pending: s.Fee_Pending,
+            LMS_Usage: lmsNum,
+            Scholarship: s.Scholarship,
+            Drop_Probability: Math.round(score),
+            Risk: risk,
+          };
+        });
+
+        const high = result.filter((s) => s.Risk === "High Risk").length;
+        const med = result.filter((s) => s.Risk === "Medium Risk").length;
+        const low = result.filter((s) => s.Risk === "Low Risk").length;
+        const ind = result.filter(
+          (s) => s.Risk === "Independent Performer",
+        ).length;
+
+        return {
+          students: result,
+          total: result.length,
+          high_risk: high,
+          medium_risk: med,
+          low_risk: low,
+          independent_performers: ind,
+          feature_importance: FEAT_IMPORTANCE,
+        };
+      }
+
+      // ===== CSV UPLOAD =====
       async function uploadAndPredict() {
         const file = inp.files[0] || inp._file;
         if (!file) {
@@ -1929,7 +2388,7 @@
         }
       }
 
-      // POPULATE
+      // ===== POPULATE DASHBOARD =====
       function populate(data) {
         allStudents = data.students;
         featData = data.feature_importance;
@@ -1954,7 +2413,6 @@
         populateInsights(data);
       }
 
-      // DONUT
       function drawDonut(high, med, low, ind, total) {
         const canvas = document.getElementById("donut");
         const ctx = canvas.getContext("2d");
@@ -1999,40 +2457,33 @@
         draw(0);
         const hp = total ? Math.round((high / total) * 100) : 0;
         document.getElementById("donut-center").innerHTML =
-          `<div style="font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:#ef4444">${hp}%</div>
-     <div style="font-size:.65rem;color:#6b7280;margin-top:2px">HIGH RISK</div>`;
+          `<div style="font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:#ef4444">${hp}%</div><div style="font-size:.65rem;color:#6b7280;margin-top:2px">HIGH RISK</div>`;
         document.getElementById("donut-legend").innerHTML = segs
           .map(
             (s) =>
-              `<div class="leg-item"><span class="leg-dot" style="background:${s.c}"></span>
-     <span style="color:#9ca3af">${s.l}</span>
-     <span style="margin-left:auto;font-weight:600">${s.v}</span></div>`,
+              `<div class="leg-item"><span class="leg-dot" style="background:${s.c}"></span><span style="color:#9ca3af">${s.l}</span><span style="margin-left:auto;font-weight:600">${s.v}</span></div>`,
           )
           .join("");
       }
 
-      // FEATURE BARS
       function drawFeatBars(feats) {
         const max = feats[0]?.Importance || 1;
         document.getElementById("feat-bars").innerHTML = feats
           .map(
             (f, i) =>
-              `<div class="bar-row">
-       <span class="bar-lbl">${f.Feature}</span>
-       <div class="bar-track"><div class="bar-fill" id="bf${i}" style="width:0%"></div></div>
-       <span class="bar-pct">${f.Importance.toFixed(1)}%</span>
-     </div>`,
+              `<div class="bar-row"><span class="bar-lbl">${f.Feature}</span><div class="bar-track"><div class="bar-fill" id="bf${i}" style="width:0%"></div></div><span class="bar-pct">${f.Importance.toFixed(1)}%</span></div>`,
           )
           .join("");
-        setTimeout(() => {
-          feats.forEach((f, i) => {
-            const el = document.getElementById("bf" + i);
-            if (el) el.style.width = (f.Importance / max) * 100 + "%";
-          });
-        }, 100);
+        setTimeout(
+          () =>
+            feats.forEach((f, i) => {
+              const el = document.getElementById("bf" + i);
+              if (el) el.style.width = (f.Importance / max) * 100 + "%";
+            }),
+          100,
+        );
       }
 
-      // DEPT CHART
       function drawDept(students) {
         const depts = ["CS", "IT", "ECE", "Mech", "Civil"];
         const colors = ["#4f8ef7", "#7c3aed", "#ec4899", "#f59e0b", "#10b981"];
@@ -2046,22 +2497,19 @@
         document.getElementById("dept-chart").innerHTML = depts
           .map(
             (d, i) =>
-              `<div class="dept-row">
-       <span class="dept-lbl">${d}</span>
-       <div class="dept-bar-track"><div class="dept-bar-fill" id="db${i}" style="width:0%;background:${colors[i]}"></div></div>
-       <span class="dept-val">${stats[i].high}/${stats[i].total}</span>
-     </div>`,
+              `<div class="dept-row"><span class="dept-lbl">${d}</span><div class="dept-bar-track"><div class="dept-bar-fill" id="db${i}" style="width:0%;background:${colors[i]}"></div></div><span class="dept-val">${stats[i].high}/${stats[i].total}</span></div>`,
           )
           .join("");
-        setTimeout(() => {
-          depts.forEach((_, i) => {
-            const el = document.getElementById("db" + i);
-            if (el) el.style.width = (stats[i].high / maxH) * 100 + "%";
-          });
-        }, 100);
+        setTimeout(
+          () =>
+            depts.forEach((_, i) => {
+              const el = document.getElementById("db" + i);
+              if (el) el.style.width = (stats[i].high / maxH) * 100 + "%";
+            }),
+          100,
+        );
       }
 
-      // TOP RISK
       function drawTopRisk(students) {
         const top = [...students]
           .sort((a, b) => b.Drop_Probability - a.Drop_Probability)
@@ -2070,37 +2518,32 @@
           .map((s) => {
             const c = riskColor(s.Risk),
               bc = badgeClass(s.Risk);
-            return `<div class="risk-row" onclick="openExplainer(${s.Student_ID})">
-      <span class="risk-id">#${s.Student_ID}</span>
-      <div class="risk-bar-wrap"><div class="risk-bar-bg"><div class="risk-bar-inner" style="background:${c}" data-w="${s.Drop_Probability}%"></div></div></div>
-      <span class="risk-prob" style="color:${c}">${s.Drop_Probability}%</span>
-      <span class="badge ${bc}">${s.Risk}</span>
-    </div>`;
+            const label = s._sid_label || "#" + s.Student_ID;
+            return `<div class="risk-row" onclick="openExplainer(${s.Student_ID})"><span class="risk-id">${label}</span><div class="risk-bar-wrap"><div class="risk-bar-bg"><div class="risk-bar-inner" style="background:${c}" data-w="${s.Drop_Probability}%"></div></div></div><span class="risk-prob" style="color:${c}">${s.Drop_Probability}%</span><span class="badge ${bc}">${s.Risk}</span></div>`;
           })
           .join("");
-        setTimeout(() => {
-          document
-            .querySelectorAll(".risk-bar-inner")
-            .forEach((el) => (el.style.width = el.dataset.w));
-        }, 200);
+        setTimeout(
+          () =>
+            document
+              .querySelectorAll(".risk-bar-inner")
+              .forEach((el) => (el.style.width = el.dataset.w)),
+          200,
+        );
       }
 
-      // TABLE
       function renderTable(students) {
         document.getElementById("tbody").innerHTML = students
           .map((s, i) => {
             const c = riskColor(s.Risk),
               bc = badgeClass(s.Risk);
+            const label = s._sid_label || "#" + s.Student_ID;
             return `<tr style="animation-delay:${Math.min(i, 25) * 0.025}s" onclick="openExplainer(${s.Student_ID})">
-      <td><strong style="font-family:'Syne',sans-serif">#${s.Student_ID}</strong></td>
-      <td>${s.Attendance}%</td>
-      <td>${s.Internal_Marks ?? "-"}</td>
-      <td>${s.Backlogs}</td>
-      <td>${s.Fee_Pending}</td>
-      <td><span class="mini-bar"><span class="mini-fill" style="width:${s.Drop_Probability}%;background:${c}"></span></span><span style="color:${c};font-weight:600">${s.Drop_Probability}%</span></td>
-      <td><span class="badge ${bc}">${s.Risk}</span></td>
-      <td><button class="explain-btn" onclick="event.stopPropagation();openExplainer(${s.Student_ID})">Explain →</button></td>
-    </tr>`;
+            <td><strong style="font-family:'Syne',sans-serif">${label}</strong></td>
+            <td>${s.Attendance}%</td><td>${s.Internal_Marks ?? "-"}</td><td>${s.Backlogs}</td><td>${s.Fee_Pending}</td>
+            <td><span class="mini-bar"><span class="mini-fill" style="width:${s.Drop_Probability}%;background:${c}"></span></span><span style="color:${c};font-weight:600">${s.Drop_Probability}%</span></td>
+            <td><span class="badge ${bc}">${s.Risk}</span></td>
+            <td><button class="explain-btn" onclick="event.stopPropagation();openExplainer(${s.Student_ID})">Explain →</button></td>
+          </tr>`;
           })
           .join("");
       }
@@ -2111,32 +2554,32 @@
         document.getElementById("search-inp").value = "";
         filterTable();
       }
-
       function filterTable() {
         const q = document.getElementById("search-inp").value.toLowerCase();
         const r = document.getElementById("risk-filter").value;
         renderTable(
           allStudents.filter(
             (s) =>
-              String(s.Student_ID).includes(q) && (r === "" || s.Risk === r),
+              (String(s.Student_ID).includes(q) ||
+                (s._sid_label || "").toLowerCase().includes(q)) &&
+              (r === "" || s.Risk === r),
           ),
         );
       }
 
-      // EXPLAINER
       function openExplainer(id) {
         const s = allStudents.find((x) => x.Student_ID === id);
         if (!s) return;
         const c = riskColor(s.Risk),
           bc = badgeClass(s.Risk);
+        const label = s._sid_label || "#" + s.Student_ID;
         document.getElementById("exp-title").textContent =
-          "Student #" + s.Student_ID + " — Detailed Analysis";
+          label + " — Detailed Analysis";
         document.getElementById("exp-num").textContent =
           s.Drop_Probability + "%";
         document.getElementById("exp-num").style.color = c;
         document.getElementById("exp-badge").innerHTML =
           `<span class="badge ${bc}" style="font-size:.9rem;padding:.3rem .9rem">${s.Risk}</span>`;
-
         const factors = [
           { l: "Attendance", v: s.Attendance, max: 100, inv: true, u: "%" },
           { l: "Backlogs", v: s.Backlogs, max: 10, inv: false, u: "" },
@@ -2157,14 +2600,9 @@
             const rPct = f.inv ? 100 - pct : pct;
             const col =
               rPct > 66 ? "#ef4444" : rPct > 33 ? "#f59e0b" : "#10b981";
-            return `<div class="exp-factor">
-      <span class="exp-f-lbl">${f.l}</span>
-      <div class="exp-f-bar"><div class="exp-f-fill" style="background:${col}" data-w="${rPct}%"></div></div>
-      <span class="exp-f-val" style="color:${col}">${f.v}${f.u}</span>
-    </div>`;
+            return `<div class="exp-factor"><span class="exp-f-lbl">${f.l}</span><div class="exp-f-bar"><div class="exp-f-fill" style="background:${col}" data-w="${rPct}%"></div></div><span class="exp-f-val" style="color:${col}">${f.v}${f.u}</span></div>`;
           })
           .join("");
-
         const v =
           s.Risk === "High Risk"
             ? {
@@ -2189,17 +2627,18 @@
                     c: "#10b981",
                     t: "✅ Student appears stable. Maintain regular engagement and standard check-ins.",
                   };
-
         const vEl = document.getElementById("exp-verdict");
         vEl.style.background = v.bg;
         vEl.style.color = v.c;
         vEl.textContent = v.t;
         document.getElementById("exp-modal").classList.remove("hidden");
-        setTimeout(() => {
-          document
-            .querySelectorAll(".exp-f-fill")
-            .forEach((el) => (el.style.width = el.dataset.w));
-        }, 200);
+        setTimeout(
+          () =>
+            document
+              .querySelectorAll(".exp-f-fill")
+              .forEach((el) => (el.style.width = el.dataset.w)),
+          200,
+        );
       }
 
       function closeModal(e) {
@@ -2207,7 +2646,6 @@
           document.getElementById("exp-modal").classList.add("hidden");
       }
 
-      // INSIGHTS
       function populateInsights(data) {
         const top = data.feature_importance[0];
         document.getElementById("ins-driver").textContent =
@@ -2228,7 +2666,6 @@
           " out of " +
           data.total +
           " students. Safe benchmark is under 15%.";
-
         const buckets = Array(20).fill(0);
         data.students.forEach((s) => {
           const idx = Math.min(Math.floor(s.Drop_Probability / 5), 19);
@@ -2243,20 +2680,21 @@
             return `<div class="p-bar" style="background:${col};opacity:.75;height:0px" data-h="${h}px" title="${pct}-${pct + 5}%: ${cnt}"></div>`;
           })
           .join("");
-        setTimeout(() => {
-          document
-            .querySelectorAll(".p-bar")
-            .forEach((el) => (el.style.height = el.dataset.h));
-        }, 200);
+        setTimeout(
+          () =>
+            document
+              .querySelectorAll(".p-bar")
+              .forEach((el) => (el.style.height = el.dataset.h)),
+          200,
+        );
       }
 
-      // TABS
       function showTab(id) {
-        ["overview", "students", "insights"].forEach((t) => {
+        ["overview", "students", "insights"].forEach((t) =>
           document
             .getElementById("tab-" + t)
-            .classList.toggle("hidden", t !== id);
-        });
+            .classList.toggle("hidden", t !== id),
+        );
         document.querySelectorAll(".tab-btn").forEach((b) => {
           b.classList.toggle(
             "active",
@@ -2274,9 +2712,9 @@
           "upload-screen",
           "loading-screen",
           "dashboard-screen",
-        ].forEach((s) => {
-          document.getElementById(s).classList.toggle("hidden", s !== id);
-        });
+        ].forEach((s) =>
+          document.getElementById(s).classList.toggle("hidden", s !== id),
+        );
       }
       function goToUpload() {
         const l = document.getElementById("landing-screen");
@@ -2312,13 +2750,11 @@
       function sleep(ms) {
         return new Promise((r) => setTimeout(r, ms));
       }
-      function showToast(msg) {
+      function showToast(msg, type) {
+        const el = document.getElementById("toast");
         document.getElementById("toast-msg").textContent = msg;
-        document.getElementById("toast").classList.remove("hidden");
-        setTimeout(
-          () => document.getElementById("toast").classList.add("hidden"),
-          5000,
-        );
+        el.className = "toast" + (type === "success" ? " success" : "");
+        setTimeout(() => el.classList.add("hidden"), 5000);
       }
       function riskColor(r) {
         return r === "High Risk"
