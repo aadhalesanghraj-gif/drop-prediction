@@ -134,7 +134,6 @@
             0 0 40px rgba(79, 142, 247, 0.3);
         }
       }
-
       /* LANDING */
       #landing-screen {
         display: flex;
@@ -276,7 +275,6 @@
           transform: scale(0.98);
         }
       }
-
       /* NAV */
       .nav {
         display: flex;
@@ -298,10 +296,9 @@
         border-radius: 20px;
         background: var(--surface);
       }
-
       /* UPLOAD */
       .hero {
-        max-width: 820px;
+        max-width: 880px;
         margin: 0 auto;
         padding: 4rem 2rem 3rem;
         text-align: center;
@@ -344,8 +341,7 @@
         margin: 0 auto 2.5rem;
         font-weight: 300;
       }
-
-      /* TABS SWITCHER */
+      /* MODE SWITCHER */
       .input-switcher {
         display: flex;
         align-items: center;
@@ -381,7 +377,6 @@
       .sw-btn:hover:not(.active) {
         color: var(--text);
       }
-
       /* UPLOAD ZONE */
       .upload-zone {
         border: 2px dashed var(--border2);
@@ -467,11 +462,11 @@
       .upload-hint {
         font-size: 0.72rem;
         color: var(--muted);
-        max-width: 420px;
+        max-width: 440px;
         text-align: center;
         margin-top: 0.5rem;
       }
-      .file-info {
+      .file-bar {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -511,11 +506,318 @@
         transform: translateY(-2px);
         box-shadow: 0 8px 30px rgba(79, 142, 247, 0.45);
       }
-
+      /* ===== VALIDATION PANEL ===== */
+      .vp-wrap {
+        margin-top: 1.5rem;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        animation: slideup 0.35s ease;
+      }
+      .vp-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.9rem 1.3rem;
+        background: var(--surface2);
+        border-bottom: 1px solid var(--border);
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+      .vp-head-title {
+        font-family: var(--font-d);
+        font-size: 0.95rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .vc-ok {
+        color: var(--low);
+      }
+      .vc-warn {
+        color: var(--medium);
+      }
+      .vc-err {
+        color: var(--high);
+      }
+      .vp-pills {
+        display: flex;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+      }
+      .vpill {
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 0.18rem 0.6rem;
+        border-radius: 20px;
+      }
+      .vpill-err {
+        background: var(--high-bg);
+        color: var(--high);
+        border: 1px solid rgba(239, 68, 68, 0.25);
+      }
+      .vpill-warn {
+        background: var(--medium-bg);
+        color: var(--medium);
+        border: 1px solid rgba(245, 158, 11, 0.25);
+      }
+      .vpill-ok {
+        background: var(--low-bg);
+        color: var(--low);
+        border: 1px solid rgba(16, 185, 129, 0.25);
+      }
+      .vpill-info {
+        background: rgba(79, 142, 247, 0.1);
+        color: var(--accent);
+        border: 1px solid rgba(79, 142, 247, 0.25);
+      }
+      .vp-body {
+        background: var(--surface);
+        padding: 1.2rem 1.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.1rem;
+      }
+      /* summary boxes */
+      .vp-sumgrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.7rem;
+      }
+      .vp-sbox {
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        text-align: center;
+      }
+      .vp-snum {
+        font-family: var(--font-d);
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+      .vp-slbl {
+        font-size: 0.68rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        margin-top: 0.1rem;
+      }
+      /* issues */
+      .vp-issue-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+        max-height: 200px;
+        overflow-y: auto;
+      }
+      .vp-iss {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.65rem;
+        padding: 0.6rem 0.85rem;
+        border-radius: 8px;
+        font-size: 0.82rem;
+        line-height: 1.5;
+      }
+      .vp-iss-err {
+        background: var(--high-bg);
+        border: 1px solid rgba(239, 68, 68, 0.15);
+      }
+      .vp-iss-warn {
+        background: var(--medium-bg);
+        border: 1px solid rgba(245, 158, 11, 0.15);
+      }
+      .vp-iss-info {
+        background: rgba(79, 142, 247, 0.07);
+        border: 1px solid rgba(79, 142, 247, 0.15);
+      }
+      .vp-iss-ico {
+        flex-shrink: 0;
+        font-size: 0.95rem;
+        margin-top: 0.05rem;
+      }
+      .vp-iss-body {
+        flex: 1;
+      }
+      .vp-iss-body strong {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.05rem;
+      }
+      .vp-iss-fix {
+        font-size: 0.74rem;
+        color: var(--muted);
+        margin-top: 0.12rem;
+      }
+      .vp-iss-fix em {
+        color: var(--low);
+        font-style: normal;
+        font-weight: 500;
+      }
+      /* col map */
+      .vp-sec-lbl {
+        font-size: 0.73rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+        margin-bottom: 0.35rem;
+      }
+      .vp-colmap {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+      .vp-col-row {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.81rem;
+        flex-wrap: wrap;
+      }
+      .col-ok {
+        color: var(--low);
+        font-weight: 500;
+      }
+      .col-miss {
+        color: var(--high);
+        font-weight: 500;
+      }
+      .col-extra {
+        color: var(--medium);
+        font-weight: 500;
+      }
+      .col-alias {
+        color: var(--muted);
+        font-size: 0.74rem;
+      }
+      /* preview table */
+      .vp-prev-wrap {
+        overflow-x: auto;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+      }
+      .vp-prev-tbl {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.77rem;
+      }
+      .vp-prev-tbl th {
+        background: var(--surface2);
+        padding: 0.45rem 0.75rem;
+        text-align: left;
+        color: var(--muted);
+        font-weight: 600;
+        white-space: nowrap;
+        border-bottom: 1px solid var(--border);
+      }
+      .vp-prev-tbl td {
+        padding: 0.4rem 0.75rem;
+        border-bottom: 1px solid var(--border);
+        white-space: nowrap;
+      }
+      .vp-prev-tbl tr:last-child td {
+        border-bottom: none;
+      }
+      .cell-err {
+        background: rgba(239, 68, 68, 0.15);
+        color: var(--high);
+        border-radius: 3px;
+        padding: 0.05rem 0.3rem;
+      }
+      .cell-fix {
+        background: rgba(16, 185, 129, 0.1);
+        color: var(--low);
+        border-radius: 3px;
+        padding: 0.05rem 0.3rem;
+      }
+      /* actions */
+      .vp-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        flex-wrap: wrap;
+        padding-top: 0.4rem;
+        border-top: 1px solid var(--border);
+      }
+      .vp-run-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        color: #fff;
+        border: none;
+        padding: 0.55rem 1.3rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: var(--font-d);
+        font-size: 0.88rem;
+        font-weight: 700;
+        transition: all 0.25s;
+        box-shadow: 0 3px 12px rgba(79, 142, 247, 0.3);
+      }
+      .vp-run-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(79, 142, 247, 0.4);
+      }
+      .vp-warn-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: rgba(245, 158, 11, 0.12);
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        color: var(--medium);
+        padding: 0.55rem 1.2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: var(--font-b);
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: all 0.2s;
+      }
+      .vp-warn-btn:hover {
+        background: rgba(245, 158, 11, 0.2);
+      }
+      .vp-dl-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: rgba(16, 185, 129, 0.08);
+        border: 1px solid rgba(16, 185, 129, 0.22);
+        color: var(--low);
+        padding: 0.55rem 1.1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: var(--font-b);
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      .vp-dl-btn:hover {
+        background: rgba(16, 185, 129, 0.16);
+      }
+      .vp-dismiss {
+        background: transparent;
+        border: 1px solid var(--border);
+        color: var(--muted);
+        padding: 0.55rem 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: var(--font-b);
+        font-size: 0.85rem;
+        transition: all 0.2s;
+        margin-left: auto;
+      }
+      .vp-dismiss:hover {
+        border-color: var(--border2);
+        color: var(--text);
+      }
       /* MANUAL INPUT */
       .manual-section {
         width: 100%;
-        max-width: 820px;
+        max-width: 880px;
         margin: 0 auto;
       }
       .manual-toolbar {
@@ -669,7 +971,6 @@
         cursor: pointer;
         text-decoration: underline;
       }
-
       /* LOADING */
       #loading-screen {
         display: flex;
@@ -765,8 +1066,7 @@
         border-radius: 4px;
         transition: width 0.4s ease;
       }
-
-      /* DASHBOARD NAV */
+      /* DASH */
       .dash-nav {
         display: flex;
         align-items: center;
@@ -819,8 +1119,6 @@
         border-color: var(--accent);
         color: var(--accent);
       }
-
-      /* DASH CONTENT */
       .tab-pane {
         padding: 2rem 3rem;
         max-width: 1400px;
@@ -850,8 +1148,6 @@
         font-size: 0.8rem;
         padding-top: 0.5rem;
       }
-
-      /* STAT CARDS */
       .stats-grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -974,8 +1270,6 @@
       .s-ind .stat-ring {
         border-color: var(--ind);
       }
-
-      /* BADGES */
       .badge {
         font-size: 0.72rem;
         font-weight: 600;
@@ -1004,8 +1298,6 @@
         color: var(--ind);
         border: 1px solid rgba(168, 85, 247, 0.2);
       }
-
-      /* CHARTS */
       .charts-row {
         display: grid;
         grid-template-columns: 280px 1fr;
@@ -1178,7 +1470,7 @@
         font-family: var(--font-d);
         font-weight: 700;
         font-size: 0.9rem;
-        width: 80px;
+        width: 100px;
       }
       .risk-bar-wrap {
         flex: 1;
@@ -1201,8 +1493,6 @@
         width: 50px;
         text-align: right;
       }
-
-      /* TABLE */
       .search-row {
         display: flex;
         gap: 0.8rem;
@@ -1298,8 +1588,6 @@
       .explain-btn:hover {
         background: rgba(79, 142, 247, 0.2);
       }
-
-      /* INSIGHTS */
       .insights-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1359,8 +1647,6 @@
         font-size: 0.72rem;
         color: var(--muted);
       }
-
-      /* MODAL */
       .exp-modal {
         position: fixed;
         inset: 0;
@@ -1471,8 +1757,6 @@
         font-weight: 500;
         line-height: 1.5;
       }
-
-      /* TOAST */
       .toast {
         position: fixed;
         bottom: 2rem;
@@ -1515,7 +1799,6 @@
           transform: translateY(0);
         }
       }
-
       @media (max-width: 1100px) {
         .stats-grid {
           grid-template-columns: repeat(3, 1fr);
@@ -1541,6 +1824,9 @@
         }
         .hero {
           padding: 3rem 1.5rem;
+        }
+        .vp-sumgrid {
+          grid-template-columns: repeat(2, 1fr);
         }
       }
       ::-webkit-scrollbar {
@@ -1619,11 +1905,9 @@
           ><br />Before It Happens
         </h1>
         <p class="hero-sub">
-          Upload a CSV batch or manually enter individual student data for
-          instant AI-driven risk analysis.
+          Upload a CSV batch or manually enter student data. EduSense validates,
+          cleans, and fixes your data automatically.
         </p>
-
-        <!-- MODE SWITCHER -->
         <div class="input-switcher">
           <button class="sw-btn active" id="sw-csv" onclick="switchMode('csv')">
             📁 CSV Upload
@@ -1632,7 +1916,6 @@
             ✏️ Manual Entry
           </button>
         </div>
-
         <!-- CSV MODE -->
         <div id="mode-csv">
           <div class="upload-zone" id="upload-zone">
@@ -1659,28 +1942,21 @@
                 Choose File
               </button>
               <p class="upload-hint">
-                Required: Student_ID · Attendance · Internal_Marks ·
-                Semester_Result · Fee_Pending · LMS_Usage · Scholarship ·
-                Backlogs
+                Required:
+                <strong
+                  >Student_ID · Attendance · Internal_Marks · Semester_Result ·
+                  Fee_Pending · LMS_Usage · Scholarship · Backlogs</strong
+                >
               </p>
             </div>
           </div>
-          <div class="file-info hidden" id="file-info">
-            <span class="file-name" id="file-name-display"></span>
-            <button class="analyze-btn" onclick="uploadAndPredict()">
-              <span>Run Analysis</span>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M5 12h14m-7-7l7 7-7 7" />
-              </svg>
-            </button>
+          <div id="file-section" class="hidden">
+            <div class="file-bar">
+              <span class="file-name" id="file-name-display"></span>
+            </div>
+            <div id="vp-container"></div>
           </div>
         </div>
-
         <!-- MANUAL MODE -->
         <div id="mode-manual" class="hidden manual-section">
           <div class="manual-toolbar">
@@ -1694,9 +1970,8 @@
                   stroke="currentColor"
                   stroke-width="2.5"
                 >
-                  <path d="M12 5v14m-7-7h14" />
-                </svg>
-                Add Student
+                  <path d="M12 5v14m-7-7h14" /></svg
+                >Add Student
               </button>
               <button class="clear-btn" onclick="clearManual()">
                 Clear All
@@ -1704,7 +1979,6 @@
             </div>
             <span class="manual-count" id="manual-count">0 students</span>
           </div>
-
           <div class="manual-table-wrap">
             <table class="manual-table">
               <thead>
@@ -1724,13 +1998,10 @@
               <tbody id="manual-tbody"></tbody>
             </table>
           </div>
-
           <p class="template-hint">
-            Need a starting point?
             <a onclick="loadSampleData()">Load sample data</a> ·
             <a onclick="addBulkRows()">Add 5 rows at once</a>
           </p>
-
           <div class="manual-actions">
             <button
               class="analyze-btn"
@@ -1757,11 +2028,11 @@
     <div class="screen hidden" id="loading-screen">
       <div class="loading-center">
         <div class="dna-strand">
-          <span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span
+          ><span></span><span></span><span></span><span></span><span></span>
         </div>
         <p class="loading-title">Analyzing Student Data</p>
-        <p class="loading-sub" id="loading-msg">Connecting to model...</p>
+        <p class="loading-sub" id="loading-msg">Processing...</p>
         <div class="loading-bar">
           <div class="loading-fill" id="loading-fill"></div>
         </div>
@@ -1785,8 +2056,6 @@
         </div>
         <button class="reset-btn" onclick="resetApp()">↩ New Upload</button>
       </nav>
-
-      <!-- OVERVIEW -->
       <div class="tab-pane" id="tab-overview">
         <div class="dash-header">
           <div>
@@ -1855,7 +2124,7 @@
               <div class="bar-chart" id="feat-bars"></div>
             </div>
             <div class="card">
-              <p class="card-title">Department-wise High Risk Count</p>
+              <p class="card-title">Department-wise High Risk</p>
               <div class="dept-chart" id="dept-chart"></div>
             </div>
           </div>
@@ -1870,8 +2139,6 @@
           <div id="top-risk"></div>
         </div>
       </div>
-
-      <!-- ALL STUDENTS -->
       <div class="tab-pane hidden" id="tab-students">
         <div class="dash-header">
           <div>
@@ -1921,8 +2188,6 @@
           </table>
         </div>
       </div>
-
-      <!-- INSIGHTS -->
       <div class="tab-pane hidden" id="tab-insights">
         <div class="dash-header">
           <div>
@@ -1934,25 +2199,25 @@
           <div class="ins-card ins-hl">
             <div class="ins-ico">🧠</div>
             <h4>Top Dropout Driver</h4>
-            <p id="ins-driver">Loading...</p>
+            <p id="ins-driver"></p>
           </div>
           <div class="ins-card">
             <div class="ins-ico">⚠️</div>
             <h4>Urgent Attention</h4>
-            <p id="ins-urgent">Loading...</p>
+            <p id="ins-urgent"></p>
           </div>
           <div class="ins-card">
             <div class="ins-ico">📊</div>
             <h4>Risk Ratio</h4>
-            <p id="ins-ratio">Loading...</p>
+            <p id="ins-ratio"></p>
           </div>
           <div class="ins-card">
             <div class="ins-ico">💡</div>
             <h4>Recommendation</h4>
             <p>
               Focus counseling on High Risk students. Consider fee waivers for
-              students with pending dues. Monitor LMS engagement weekly.
-              Celebrate Independent Performers.
+              pending dues. Monitor LMS engagement weekly. Celebrate Independent
+              Performers.
             </p>
           </div>
         </div>
@@ -1992,10 +2257,9 @@
       </div>
     </div>
 
-    <!-- TOAST -->
     <div class="toast hidden" id="toast">
-      <span id="toast-msg"></span>
-      <button
+      <span id="toast-msg"></span
+      ><button
         onclick="document.getElementById('toast').classList.add('hidden')"
       >
         ✕
@@ -2003,12 +2267,594 @@
     </div>
 
     <script>
-      let allStudents = [];
-      let featData = [];
-      let manualRows = [];
-      let rowCounter = 1;
+      // ========== STATE ==========
+      let allStudents = [],
+        manualRows = [],
+        rowCounter = 1,
+        fixedRows = null;
 
-      // ===== DRAG & DROP =====
+      // ========== REQUIRED COLS + ALIASES ==========
+      const REQ = [
+        "Student_ID",
+        "Attendance",
+        "Internal_Marks",
+        "Semester_Result",
+        "Fee_Pending",
+        "LMS_Usage",
+        "Scholarship",
+        "Backlogs",
+      ];
+      const ALIASES = {
+        student_id: [
+          "studentid",
+          "student id",
+          "id",
+          "roll_no",
+          "rollno",
+          "roll no",
+          "sno",
+          "s_no",
+          "roll",
+          "enrollment",
+        ],
+        attendance: [
+          "attendance%",
+          "att",
+          "attend",
+          "att%",
+          "attendance_pct",
+          "present%",
+        ],
+        internal_marks: [
+          "internal marks",
+          "marks",
+          "internal",
+          "int_marks",
+          "intmarks",
+          "score",
+          "scores",
+          "internal_score",
+        ],
+        semester_result: [
+          "semester result",
+          "sem_result",
+          "semresult",
+          "result",
+          "sem result",
+          "pass_fail",
+          "passorfail",
+          "exam_result",
+        ],
+        fee_pending: [
+          "fee pending",
+          "fees_pending",
+          "fee",
+          "fees",
+          "pending_fee",
+          "pending fee",
+          "dues",
+          "outstanding",
+          "balance",
+        ],
+        lms_usage: [
+          "lms usage",
+          "lms",
+          "lmsusage",
+          "lms_use",
+          "portal_usage",
+          "portal usage",
+          "online_usage",
+          "elearning",
+          "e_learning",
+        ],
+        scholarship: [
+          "schol",
+          "scholarships",
+          "has_scholarship",
+          "is_scholarship",
+          "scholarship_status",
+          "schol_status",
+        ],
+        backlogs: [
+          "backlog",
+          "back_logs",
+          "back logs",
+          "arrears",
+          "arrear",
+          "pending_subjects",
+          "failed_subjects",
+          "held_back",
+        ],
+      };
+
+      function canonicalize(h) {
+        const k = h
+          .toLowerCase()
+          .replace(/[\s\-]+/g, "_")
+          .replace(/[^a-z0-9_]/g, "");
+        for (const [canon, aliases] of Object.entries(ALIASES)) {
+          if (k === canon)
+            return REQ.find((r) => r.toLowerCase() === canon) || canon;
+          for (const a of aliases)
+            if (k === a.replace(/[\s\-]+/g, "_").replace(/[^a-z0-9_]/g, ""))
+              return REQ.find((r) => r.toLowerCase() === canon) || canon;
+        }
+        return null;
+      }
+
+      // ========== CSV PARSER ==========
+      function parseCSV(text) {
+        // detect delimiter
+        const firstLine = text.split(/\r?\n/)[0];
+        let delim = ",";
+        if (
+          (firstLine.match(/;/g) || []).length >
+          (firstLine.match(/,/g) || []).length
+        )
+          delim = ";";
+        else if (
+          (firstLine.match(/\t/g) || []).length >
+          (firstLine.match(/,/g) || []).length
+        )
+          delim = "\t";
+
+        const lines = text
+          .split(/\r?\n/)
+          .map((l) => l.trim())
+          .filter(Boolean);
+        if (lines.length < 2) return { headers: [], rows: [], delim };
+        const splitLine = (l) => {
+          const cols = [];
+          let cur = "",
+            inQ = false;
+          for (const c of l) {
+            if (c === '"') {
+              inQ = !inQ;
+              continue;
+            }
+            if (c === delim && !inQ) {
+              cols.push(cur.trim());
+              cur = "";
+            } else cur += c;
+          }
+          cols.push(cur.trim());
+          return cols;
+        };
+        const headers = splitLine(lines[0]).map((h) =>
+          h.replace(/^"|"$/g, "").trim(),
+        );
+        const rows = lines
+          .slice(1)
+          .map((line, i) => ({ _n: i + 2, _raw: splitLine(line) }));
+        return { headers, rows, delim };
+      }
+
+      // ========== VALIDATION ENGINE ==========
+      function validateCSV(headers, rows) {
+        const issues = [],
+          warnings = [],
+          infos = [];
+        const colMap = {}; // header -> canonical
+        const usedCanon = new Set();
+        headers.forEach((h) => {
+          const c = canonicalize(h);
+          if (c && !usedCanon.has(c)) {
+            colMap[h] = c;
+            usedCanon.add(c);
+          } else colMap[h] = null;
+        });
+        const foundCanon = Object.values(colMap).filter(Boolean);
+        const missingCols = REQ.filter((r) => !foundCanon.includes(r));
+        const extraCols = headers.filter((h) => !colMap[h]);
+
+        if (missingCols.length)
+          issues.push({
+            t: "err",
+            i: "❌",
+            title: "Missing required columns",
+            desc: "Not found: " + missingCols.join(", "),
+            fix: 'Check column names. Accepted aliases: e.g. "Att" → Attendance, "Marks" → Internal_Marks, "Arrears" → Backlogs.',
+          });
+        if (extraCols.length)
+          warnings.push({
+            t: "warn",
+            i: "⚠️",
+            title: `${extraCols.length} unknown column(s) will be ignored`,
+            desc: extraCols.join(", "),
+            fix: "These columns are safely skipped during analysis.",
+          });
+
+        let blanks = 0,
+          dups = [],
+          seenIDs = new Set(),
+          typeErrs = 0,
+          rangeFixed = 0,
+          missingFilled = 0,
+          valFixed = 0,
+          autoFixed = 0;
+        const cleaned = rows
+          .map((row) => {
+            const obj = {};
+            headers.forEach((h, i) => {
+              const c = colMap[h];
+              if (c)
+                obj[c] = row._raw[i] !== undefined ? row._raw[i].trim() : "";
+            });
+            if (Object.values(obj).every((v) => !v)) {
+              blanks++;
+              return null;
+            }
+            if (obj.Student_ID) {
+              if (seenIDs.has(obj.Student_ID)) dups.push(obj.Student_ID);
+              else seenIDs.add(obj.Student_ID);
+            }
+
+            // Fill missing
+            const DEFAULTS = {
+              Attendance: "75",
+              Internal_Marks: "60",
+              Backlogs: "0",
+              Fee_Pending: "0",
+              LMS_Usage: "Medium",
+              Semester_Result: "Pass",
+              Scholarship: "0",
+              Student_ID: "ID" + row._n,
+            };
+            REQ.forEach((col) => {
+              if (obj[col] === undefined || obj[col] === "") {
+                obj[col] = DEFAULTS[col];
+                obj["_filled_" + col] = true;
+                missingFilled++;
+                autoFixed++;
+              }
+            });
+
+            // Attendance
+            const att = parseFloat(obj.Attendance);
+            if (isNaN(att)) {
+              obj._ERR_Attendance = "Not a number";
+              typeErrs++;
+            } else if (att < 0 || att > 100) {
+              obj.Attendance = String(Math.max(0, Math.min(100, att)));
+              obj._FIX_Attendance = "Clamped to " + obj.Attendance;
+              rangeFixed++;
+              autoFixed++;
+            }
+
+            // Internal_Marks
+            const mk = parseFloat(obj.Internal_Marks);
+            if (isNaN(mk)) {
+              obj._ERR_Internal_Marks = "Not a number";
+              typeErrs++;
+            } else if (mk < 0 || mk > 100) {
+              obj.Internal_Marks = String(Math.max(0, Math.min(100, mk)));
+              obj._FIX_Internal_Marks = "Clamped to " + obj.Internal_Marks;
+              rangeFixed++;
+              autoFixed++;
+            }
+
+            // Backlogs
+            const bl = parseInt(obj.Backlogs);
+            if (isNaN(bl) || bl < 0) {
+              obj.Backlogs = "0";
+              obj._FIX_Backlogs = "Set to 0";
+              autoFixed++;
+              valFixed++;
+            }
+
+            // Fee_Pending
+            const fee = parseFloat(obj.Fee_Pending);
+            if (isNaN(fee) || fee < 0) {
+              obj.Fee_Pending = "0";
+              obj._FIX_Fee_Pending = "Set to 0";
+              autoFixed++;
+              valFixed++;
+            }
+
+            // Scholarship → 0/1
+            const sch = String(obj.Scholarship || "").toLowerCase();
+            const schMap = {
+              yes: "1",
+              y: "1",
+              true: "1",
+              1: "1",
+              no: "0",
+              n: "0",
+              false: "0",
+              0: "0",
+            };
+            if (schMap[sch] !== undefined) {
+              if (obj.Scholarship !== schMap[sch]) {
+                obj.Scholarship = schMap[sch];
+                obj._FIX_Scholarship = "Normalized to " + schMap[sch];
+                autoFixed++;
+                valFixed++;
+              }
+            } else {
+              obj.Scholarship = "0";
+              obj._FIX_Scholarship = "Unknown→0";
+              autoFixed++;
+              valFixed++;
+            }
+
+            // LMS_Usage
+            const lms = String(obj.LMS_Usage || "")
+              .toLowerCase()
+              .trim();
+            const lmsMap = {
+              high: "High",
+              h: "High",
+              1: "High",
+              medium: "Medium",
+              med: "Medium",
+              m: "Medium",
+              2: "Medium",
+              low: "Low",
+              l: "Low",
+              3: "Low",
+            };
+            if (lmsMap[lms]) {
+              if (obj.LMS_Usage !== lmsMap[lms]) {
+                obj.LMS_Usage = lmsMap[lms];
+                obj._FIX_LMS_Usage = "→" + lmsMap[lms];
+                autoFixed++;
+                valFixed++;
+              }
+            } else {
+              obj.LMS_Usage = "Medium";
+              obj._FIX_LMS_Usage = "Unknown→Medium";
+              autoFixed++;
+              valFixed++;
+            }
+
+            // Semester_Result
+            const sem = String(obj.Semester_Result || "")
+              .toLowerCase()
+              .trim();
+            const semMap = {
+              pass: "Pass",
+              p: "Pass",
+              1: "Pass",
+              ok: "Pass",
+              fail: "Fail",
+              f: "Fail",
+              0: "Fail",
+              failed: "Fail",
+              pending: "Pending",
+              pend: "Pending",
+              awaited: "Pending",
+            };
+            if (semMap[sem]) {
+              if (obj.Semester_Result !== semMap[sem]) {
+                obj.Semester_Result = semMap[sem];
+                obj._FIX_Semester_Result = "→" + semMap[sem];
+                autoFixed++;
+                valFixed++;
+              }
+            } else {
+              obj.Semester_Result = "Pass";
+              obj._FIX_Semester_Result = "Unknown→Pass";
+              autoFixed++;
+              valFixed++;
+            }
+
+            return { ...obj, _rowNum: row._n };
+          })
+          .filter(Boolean);
+
+        if (blanks)
+          warnings.push({
+            t: "warn",
+            i: "🈳",
+            title: `${blanks} blank row(s) removed`,
+            desc: "Completely empty rows were skipped automatically.",
+            fix: "Auto-fixed — no action needed.",
+          });
+        if (dups.length)
+          warnings.push({
+            t: "warn",
+            i: "🔁",
+            title: `${dups.length} duplicate Student_ID(s)`,
+            desc:
+              [...new Set(dups)].slice(0, 5).join(", ") +
+              (dups.length > 5 ? " …" : ""),
+            fix: "Duplicates are included but may affect cohort statistics.",
+          });
+        if (typeErrs)
+          issues.push({
+            t: "err",
+            i: "🔢",
+            title: `${typeErrs} non-numeric value(s) in numeric fields`,
+            desc: "Attendance or Internal_Marks contain text/symbols.",
+            fix: "These rows are marked with ⚠ below. Fix the values or remove the rows before proceeding.",
+          });
+        if (rangeFixed)
+          warnings.push({
+            t: "warn",
+            i: "📏",
+            title: `${rangeFixed} out-of-range values clamped`,
+            desc: "e.g. attendance 120 → 100, marks -5 → 0.",
+            fix: "Auto-fixed: values clamped to valid 0–100 range. Marked with ✎ in preview.",
+          });
+        if (missingFilled)
+          warnings.push({
+            t: "warn",
+            i: "🕳️",
+            title: `${missingFilled} missing cell(s) filled with defaults`,
+            desc: "Blank required cells were filled: Attendance→75, Backlogs→0, LMS→Medium, etc.",
+            fix: "Auto-fixed: review the preview below and download the fixed CSV if needed.",
+          });
+        if (valFixed)
+          infos.push({
+            t: "info",
+            i: "🔄",
+            title: `${valFixed} value(s) normalized`,
+            desc: 'e.g. "yes"→1, "High"→High, "Fail"→Fail, "Pass"→Pass.',
+            fix: "Auto-fixed: normalized to expected formats.",
+          });
+        if (rows.length > 1000)
+          infos.push({
+            t: "info",
+            i: "ℹ️",
+            title: "Large dataset: " + rows.length + " rows",
+            desc: "Analysis may take a few extra seconds.",
+            fix: null,
+          });
+        if (cleaned.length === 0)
+          issues.push({
+            t: "err",
+            i: "🚫",
+            title: "No valid rows after cleaning",
+            desc: "The file has no processable student records.",
+            fix: "Fix the CSV file and re-upload.",
+          });
+
+        const hasErrs = issues.some((x) => x.t === "err");
+        const fatal = missingCols.length > 0 || cleaned.length === 0;
+        return {
+          colMap,
+          missingCols,
+          extraCols,
+          issues,
+          warnings,
+          infos,
+          cleaned,
+          total: rows.length,
+          valid: cleaned.length,
+          blanks,
+          autoFixed,
+          typeErrs,
+          hasErrs,
+          fatal,
+        };
+      }
+
+      // ========== RENDER VALIDATION PANEL ==========
+      function renderVP(result, headers) {
+        const {
+          colMap,
+          missingCols,
+          extraCols,
+          issues,
+          warnings,
+          infos,
+          cleaned,
+          total,
+          valid,
+          autoFixed,
+          typeErrs,
+          hasErrs,
+          fatal,
+        } = result;
+        const all = [...issues, ...warnings, ...infos];
+        let icon = "✅",
+          cls = "vc-ok",
+          txt = "File looks good — ready to analyze";
+        if (fatal) {
+          icon = "❌";
+          cls = "vc-err";
+          txt = "Critical errors — fix required before analysis";
+        } else if (hasErrs) {
+          icon = "❌";
+          cls = "vc-err";
+          txt = "Errors detected — proceed with caution";
+        } else if (warnings.length) {
+          icon = "⚠️";
+          cls = "vc-warn";
+          txt = "Warnings found — " + autoFixed + " issues auto-fixed";
+        }
+
+        // pills
+        const pills = [
+          total ? `<span class="vpill vpill-info">${total} rows</span>` : "",
+          issues.length
+            ? `<span class="vpill vpill-err">${issues.length} error${issues.length > 1 ? "s" : ""}</span>`
+            : "",
+          warnings.length
+            ? `<span class="vpill vpill-warn">${warnings.length} warning${warnings.length > 1 ? "s" : ""}</span>`
+            : "",
+          autoFixed
+            ? `<span class="vpill vpill-ok">${autoFixed} auto-fixed</span>`
+            : "",
+          !fatal && !hasErrs && !warnings.length
+            ? `<span class="vpill vpill-ok">Ready ✓</span>`
+            : "",
+        ]
+          .filter(Boolean)
+          .join("");
+
+        // column map
+        const colRows =
+          REQ.map((req) => {
+            const found = Object.entries(colMap).find(([, v]) => v === req);
+            if (found) {
+              const same = found[0] === req;
+              return `<div class="vp-col-row"><span class="col-ok">✓ ${req}</span>${!same ? `<span class="col-alias">← from "${found[0]}"</span>` : ""}</div>`;
+            }
+            return `<div class="vp-col-row"><span class="col-miss">✗ ${req} — MISSING</span></div>`;
+          }).join("") +
+          extraCols
+            .map(
+              (e) =>
+                `<div class="vp-col-row"><span class="col-extra">~ ${e} (ignored)</span></div>`,
+            )
+            .join("");
+
+        // preview
+        const pCols = REQ.filter((r) => Object.values(colMap).includes(r));
+        const pRows = cleaned.slice(0, 4);
+        const preview = pRows.length
+          ? `<div>
+    <p class="vp-sec-lbl">Data Preview — first ${pRows.length} rows &nbsp;<span style="font-weight:400;color:var(--low)">✎=auto-fixed</span> &nbsp;<span style="color:var(--high)">⚠=error</span></p>
+    <div class="vp-prev-wrap"><table class="vp-prev-tbl"><thead><tr>${pCols.map((c) => `<th>${c}</th>`).join("")}</tr></thead><tbody>${pRows
+      .map(
+        (row) =>
+          `<tr>${pCols
+            .map((col) => {
+              let v = row[col] ?? "—",
+                cls = "";
+              if (row["_ERR_" + col]) cls = "cell-err";
+              else if (row["_FIX_" + col] || row["_filled_" + col])
+                cls = "cell-fix";
+              return `<td><span class="${cls}">${v}${row["_ERR_" + col] ? " ⚠" : ""}${(row["_FIX_" + col] || row["_filled_" + col]) && !row["_ERR_" + col] ? " ✎" : ""}</span></td>`;
+            })
+            .join("")}</tr>`,
+      )
+      .join("")}</tbody></table></div></div>`
+          : "";
+
+        // actions
+        let actions = "";
+        if (!fatal && !hasErrs)
+          actions += `<button class="vp-run-btn" onclick="proceedWithCSV()">▶ Run Analysis</button>`;
+        else if (!fatal)
+          actions += `<button class="vp-warn-btn" onclick="proceedWithCSV()">⚠️ Proceed Anyway</button>`;
+        if (autoFixed)
+          actions += `<button class="vp-dl-btn" onclick="downloadFixed()">⬇ Download Fixed CSV</button>`;
+        actions += `<button class="vp-dismiss" onclick="dismissFile()">✕ Re-upload</button>`;
+
+        document.getElementById("vp-container").innerHTML = `
+  <div class="vp-wrap">
+    <div class="vp-head">
+      <span class="vp-head-title ${cls}">${icon} CSV Validation Report</span>
+      <div class="vp-pills">${pills}</div>
+    </div>
+    <div class="vp-body">
+      <div class="vp-sumgrid">
+        <div class="vp-sbox"><div class="vp-snum" style="color:var(--accent)">${total}</div><div class="vp-slbl">Total Rows</div></div>
+        <div class="vp-sbox"><div class="vp-snum" style="color:var(--low)">${valid}</div><div class="vp-slbl">Valid Rows</div></div>
+        <div class="vp-sbox"><div class="vp-snum" style="color:${issues.length ? "var(--high)" : "var(--low)"}">${issues.length}</div><div class="vp-slbl">Errors</div></div>
+        <div class="vp-sbox"><div class="vp-snum" style="color:${autoFixed ? "var(--medium)" : "var(--low)"}">${autoFixed}</div><div class="vp-slbl">Auto-Fixed</div></div>
+      </div>
+      ${all.length ? `<div><p class="vp-sec-lbl">Issues Found</p><div class="vp-issue-list">${all.map((iss) => `<div class="vp-iss vp-iss-${iss.t}"><span class="vp-iss-ico">${iss.i}</span><div class="vp-iss-body"><strong>${iss.title}</strong>${iss.desc}${iss.fix ? `<div class="vp-iss-fix">↳ <em>${iss.fix}</em></div>` : ""}</div></div>`).join("")}</div></div>` : `<div style="color:var(--low);font-size:.86rem">✅ No issues — all columns and values are clean.</div>`}
+      <div><p class="vp-sec-lbl">Column Detection (${REQ.filter((r) => Object.values(colMap).includes(r)).length}/${REQ.length} found)</p><div class="vp-colmap">${colRows}</div></div>
+      ${preview}
+      <div class="vp-actions">${actions}</div>
+    </div>
+  </div>`;
+      }
+
+      // ========== FILE HANDLING ==========
       const zone = document.getElementById("upload-zone");
       const inp = document.getElementById("csv-input");
       zone.addEventListener("click", () => inp.click());
@@ -2023,93 +2869,173 @@
         e.preventDefault();
         zone.classList.remove("dragover");
         const f = e.dataTransfer.files[0];
-        if (f && f.name.endsWith(".csv")) setFile(f);
-        else showToast("Please drop a valid .csv file.");
+        if (f && f.name.endsWith(".csv")) handleFile(f);
+        else showToast("Please drop a .csv file.");
       });
       inp.addEventListener("change", () => {
-        if (inp.files[0]) setFile(inp.files[0]);
+        if (inp.files[0]) handleFile(inp.files[0]);
       });
 
-      function setFile(f) {
+      function handleFile(f) {
         inp._file = f;
         document.getElementById("file-name-display").textContent =
           "📄 " + f.name;
-        document.getElementById("file-info").classList.remove("hidden");
+        document.getElementById("file-section").classList.remove("hidden");
+        document.getElementById("vp-container").innerHTML =
+          '<div style="text-align:center;color:var(--muted);padding:1rem;font-size:.9rem">🔍 Validating your CSV...</div>';
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const { headers, rows, delim } = parseCSV(e.target.result);
+          if (!headers.length || !rows.length) {
+            document.getElementById("vp-container").innerHTML =
+              '<div style="padding:1rem;color:var(--high);background:var(--high-bg);border-radius:10px;margin-top:1rem;font-size:.9rem">❌ File is empty or unreadable. Please check the file and try again.</div>';
+            return;
+          }
+          if (delim !== ",")
+            warnings_prepend = {
+              t: "warn",
+              i: "🔧",
+              title: "Non-standard delimiter detected",
+              desc: `File uses "${delim === "\\t" ? "tab" : delim}" instead of comma — auto-converted.`,
+              fix: "Auto-fixed: parsed correctly.",
+            };
+          const result = validateCSV(headers, rows);
+          fixedRows = result.cleaned;
+          renderVP(result, headers);
+        };
+        reader.readAsText(f);
       }
 
-      // ===== MODE SWITCHER =====
-      function switchMode(mode) {
+      function dismissFile() {
+        document.getElementById("file-section").classList.add("hidden");
+        document.getElementById("vp-container").innerHTML = "";
+        fixedRows = null;
+        inp.value = "";
+      }
+
+      function downloadFixed() {
+        if (!fixedRows) return;
+        const csv =
+          REQ.join(",") +
+          "\n" +
+          fixedRows.map((r) => REQ.map((c) => r[c] ?? "").join(",")).join("\n");
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
+        a.download = "edusense_fixed.csv";
+        a.click();
+        showToast("Fixed CSV downloaded!", "success");
+      }
+
+      async function proceedWithCSV() {
+        showScreen("loading-screen");
+        animateBar();
+        if (fixedRows && fixedRows.length) {
+          const csv =
+            REQ.join(",") +
+            "\n" +
+            fixedRows
+              .map((r) => REQ.map((c) => r[c] ?? "").join(","))
+              .join("\n");
+          const f = new File([csv], "validated.csv", { type: "text/csv" });
+          const fd = new FormData();
+          fd.append("file", f);
+          try {
+            setMsg("Sending validated data to model...");
+            const res = await fetch("/predict", { method: "POST", body: fd });
+            const data = await res.json();
+            if (data.error) throw new Error(data.error);
+            await sleep(350);
+            populate(data);
+            showScreen("dashboard-screen");
+          } catch (e) {
+            setMsg("Running local simulation...");
+            await sleep(600);
+            const stus = fixedRows.map(mapRow);
+            populate(simulatePrediction(stus));
+            showScreen("dashboard-screen");
+            showToast("Flask offline — simulation used.", "success");
+          }
+        } else {
+          const fd = new FormData();
+          fd.append("file", inp._file || inp.files[0]);
+          try {
+            const res = await fetch("/predict", { method: "POST", body: fd });
+            const data = await res.json();
+            if (data.error) throw new Error(data.error);
+            await sleep(350);
+            populate(data);
+            showScreen("dashboard-screen");
+          } catch (e) {
+            showToast("Cannot connect to Flask.");
+            showScreen("upload-screen");
+          }
+        }
+      }
+
+      function mapRow(r) {
+        return {
+          Student_ID: r.Student_ID,
+          Attendance: parseFloat(r.Attendance) || 75,
+          Internal_Marks: parseFloat(r.Internal_Marks) || 60,
+          Backlogs: parseInt(r.Backlogs) || 0,
+          Fee_Pending: parseFloat(r.Fee_Pending) || 0,
+          LMS_Usage: r.LMS_Usage || "Medium",
+          Semester_Result: r.Semester_Result || "Pass",
+          Scholarship: parseInt(r.Scholarship) || 0,
+        };
+      }
+
+      // ========== MODE SWITCHER ==========
+      function switchMode(m) {
         document
           .getElementById("mode-csv")
-          .classList.toggle("hidden", mode !== "csv");
+          .classList.toggle("hidden", m !== "csv");
         document
           .getElementById("mode-manual")
-          .classList.toggle("hidden", mode !== "manual");
+          .classList.toggle("hidden", m !== "manual");
         document
           .getElementById("sw-csv")
-          .classList.toggle("active", mode === "csv");
+          .classList.toggle("active", m === "csv");
         document
           .getElementById("sw-manual")
-          .classList.toggle("active", mode === "manual");
-        if (mode === "manual" && manualRows.length === 0) addManualRow();
+          .classList.toggle("active", m === "manual");
+        if (m === "manual" && manualRows.length === 0) addManualRow();
       }
 
-      // ===== MANUAL ROWS =====
-      function addManualRow(prefill) {
+      // ========== MANUAL ENTRY ==========
+      function addManualRow(p) {
         const id = rowCounter++;
         manualRows.push(id);
-        const p = prefill || {};
+        p = p || {};
         const row = document.createElement("tr");
         row.id = "mrow-" + id;
-        row.innerHTML = `
-          <td style="color:var(--muted);font-size:.78rem;text-align:center;width:32px">${manualRows.length}</td>
-          <td><input class="mi" id="sid-${id}" type="text" placeholder="STU${String(id).padStart(3, "0")}" value="${p.sid || ""}" oninput="updateAnalyzeBtn()"/></td>
-          <td><input class="mi" id="att-${id}" type="number" min="0" max="100" placeholder="75" value="${p.att || ""}" oninput="updateAnalyzeBtn()"/></td>
-          <td><input class="mi" id="marks-${id}" type="number" min="0" max="100" placeholder="60" value="${p.marks || ""}"/></td>
-          <td><input class="mi" id="bl-${id}" type="number" min="0" max="20" placeholder="0" value="${p.bl || ""}"/></td>
-          <td><input class="mi" id="fee-${id}" type="number" min="0" placeholder="0" value="${p.fee || ""}"/></td>
-          <td>
-            <select class="mi-sel" id="lms-${id}">
-              <option value="High" ${p.lms === "High" ? "selected" : ""}>High</option>
-              <option value="Medium" ${p.lms === "Medium" ? "selected" : !p.lms ? "selected" : ""}>Medium</option>
-              <option value="Low" ${p.lms === "Low" ? "selected" : ""}>Low</option>
-            </select>
-          </td>
-          <td>
-            <select class="mi-sel" id="sem-${id}">
-              <option value="Pass" ${p.sem === "Pass" ? "selected" : !p.sem ? "selected" : ""}>Pass</option>
-              <option value="Fail" ${p.sem === "Fail" ? "selected" : ""}>Fail</option>
-              <option value="Pending" ${p.sem === "Pending" ? "selected" : ""}>Pending</option>
-            </select>
-          </td>
-          <td>
-            <select class="mi-sel" id="sch-${id}">
-              <option value="No" ${p.sch === "No" ? "selected" : !p.sch ? "selected" : ""}>No</option>
-              <option value="Yes" ${p.sch === "Yes" ? "selected" : ""}>Yes</option>
-            </select>
-          </td>
-          <td><button class="del-row-btn" onclick="deleteManualRow(${id})">✕</button></td>`;
+        row.innerHTML = `<td style="color:var(--muted);font-size:.78rem;text-align:center;width:32px">${manualRows.length}</td>
+    <td><input class="mi" id="sid-${id}" type="text" placeholder="STU${String(id).padStart(3, "0")}" value="${p.sid || ""}" oninput="updateAnalyzeBtn()"/></td>
+    <td><input class="mi" id="att-${id}" type="number" min="0" max="100" placeholder="75" value="${p.att || ""}" oninput="updateAnalyzeBtn()"/></td>
+    <td><input class="mi" id="marks-${id}" type="number" min="0" max="100" placeholder="60" value="${p.marks || ""}"/></td>
+    <td><input class="mi" id="bl-${id}" type="number" min="0" max="20" placeholder="0" value="${p.bl || ""}"/></td>
+    <td><input class="mi" id="fee-${id}" type="number" min="0" placeholder="0" value="${p.fee || ""}"/></td>
+    <td><select class="mi-sel" id="lms-${id}"><option value="High" ${p.lms === "High" ? "sel" : ""}>High</option><option value="Medium" ${!p.lms || p.lms === "Medium" ? "selected" : ""}>Medium</option><option value="Low" ${p.lms === "Low" ? "selected" : ""}>Low</option></select></td>
+    <td><select class="mi-sel" id="sem-${id}"><option value="Pass" ${!p.sem || p.sem === "Pass" ? "selected" : ""}>Pass</option><option value="Fail" ${p.sem === "Fail" ? "selected" : ""}>Fail</option><option value="Pending" ${p.sem === "Pending" ? "selected" : ""}>Pending</option></select></td>
+    <td><select class="mi-sel" id="sch-${id}"><option value="No" ${!p.sch || p.sch === "No" ? "selected" : ""}>No</option><option value="Yes" ${p.sch === "Yes" ? "selected" : ""}>Yes</option></select></td>
+    <td><button class="del-row-btn" onclick="deleteManualRow(${id})">✕</button></td>`;
         document.getElementById("manual-tbody").appendChild(row);
         updateManualCount();
         updateAnalyzeBtn();
       }
-
       function deleteManualRow(id) {
         manualRows = manualRows.filter((r) => r !== id);
-        const el = document.getElementById("mrow-" + id);
-        if (el) el.remove();
+        document.getElementById("mrow-" + id)?.remove();
         renumberRows();
         updateManualCount();
         updateAnalyzeBtn();
       }
-
       function renumberRows() {
         manualRows.forEach((id, i) => {
-          const row = document.getElementById("mrow-" + id);
-          if (row) row.querySelector("td:first-child").textContent = i + 1;
+          const r = document.getElementById("mrow-" + id);
+          if (r) r.querySelector("td:first-child").textContent = i + 1;
         });
       }
-
       function clearManual() {
         manualRows = [];
         document.getElementById("manual-tbody").innerHTML = "";
@@ -2117,32 +3043,27 @@
         updateManualCount();
         updateAnalyzeBtn();
       }
-
       function addBulkRows() {
         for (let i = 0; i < 5; i++) addManualRow();
       }
-
       function updateManualCount() {
         const n = manualRows.length;
         document.getElementById("manual-count").textContent =
           n + " student" + (n !== 1 ? "s" : "");
       }
-
       function updateAnalyzeBtn() {
         const btn = document.getElementById("manual-analyze-btn");
-        const hasData = manualRows.some((id) => {
-          const sid = document.getElementById("sid-" + id)?.value.trim();
-          const att = document.getElementById("att-" + id)?.value.trim();
-          return sid && att;
-        });
-        btn.style.opacity = manualRows.length > 0 && hasData ? "1" : "0.5";
-        btn.style.pointerEvents =
-          manualRows.length > 0 && hasData ? "auto" : "none";
+        const ok = manualRows.some(
+          (id) =>
+            document.getElementById("sid-" + id)?.value.trim() &&
+            document.getElementById("att-" + id)?.value.trim(),
+        );
+        btn.style.opacity = manualRows.length && ok ? "1" : "0.5";
+        btn.style.pointerEvents = manualRows.length && ok ? "auto" : "none";
       }
-
       function loadSampleData() {
         clearManual();
-        const samples = [
+        [
           {
             sid: "STU101",
             att: "42",
@@ -2193,67 +3114,60 @@
             sem: "Pass",
             sch: "Yes",
           },
-        ];
-        samples.forEach((s) => addManualRow(s));
+        ].forEach((s) => addManualRow(s));
         showToast("Sample data loaded!", "success");
       }
 
-      // ===== MANUAL ANALYSIS =====
-      function collectManualData() {
-        const errors = [];
-        const students = manualRows.map((id, idx) => {
-          const sid =
-            document.getElementById("sid-" + id)?.value.trim() ||
-            "STU" + (idx + 1);
-          const att =
-            parseFloat(document.getElementById("att-" + id)?.value) || 0;
-          const marks =
-            parseFloat(document.getElementById("marks-" + id)?.value) || 60;
-          const bl = parseInt(document.getElementById("bl-" + id)?.value) || 0;
-          const fee =
-            parseFloat(document.getElementById("fee-" + id)?.value) || 0;
-          const lms = document.getElementById("lms-" + id)?.value || "Medium";
-          const sem = document.getElementById("sem-" + id)?.value || "Pass";
-          const sch = document.getElementById("sch-" + id)?.value || "No";
-
-          if (att < 0 || att > 100) {
-            document.getElementById("att-" + id)?.classList.add("err");
-            errors.push("Row " + (idx + 1) + ": Attendance must be 0–100");
-          } else document.getElementById("att-" + id)?.classList.remove("err");
-
-          return {
-            Student_ID: sid,
-            Attendance: att,
-            Internal_Marks: marks,
-            Backlogs: bl,
-            Fee_Pending: fee,
-            LMS_Usage: lms,
-            Semester_Result: sem,
-            Scholarship: sch === "Yes" ? 1 : 0,
-          };
-        });
-        return { students, errors };
-      }
-
       async function runManualAnalysis() {
-        const { students, errors } = collectManualData();
+        const errors = [],
+          students = manualRows.map((id, idx) => {
+            const sid =
+              document.getElementById("sid-" + id)?.value.trim() ||
+              "STU" + (idx + 1);
+            const att =
+              parseFloat(document.getElementById("att-" + id)?.value) || 0;
+            const marks =
+              parseFloat(document.getElementById("marks-" + id)?.value) || 60;
+            const bl =
+              parseInt(document.getElementById("bl-" + id)?.value) || 0;
+            const fee =
+              parseFloat(document.getElementById("fee-" + id)?.value) || 0;
+            const lms = document.getElementById("lms-" + id)?.value || "Medium";
+            const sem = document.getElementById("sem-" + id)?.value || "Pass";
+            const sch =
+              document.getElementById("sch-" + id)?.value === "Yes" ? 1 : 0;
+            if (att < 0 || att > 100) {
+              document.getElementById("att-" + id)?.classList.add("err");
+              errors.push("Row " + (idx + 1) + ": Attendance must be 0–100");
+            } else
+              document.getElementById("att-" + id)?.classList.remove("err");
+            return {
+              Student_ID: sid,
+              Attendance: att,
+              Internal_Marks: marks,
+              Backlogs: bl,
+              Fee_Pending: fee,
+              LMS_Usage: lms,
+              Semester_Result: sem,
+              Scholarship: sch,
+            };
+          });
         if (errors.length) {
           showToast(errors[0]);
           return;
         }
         showScreen("loading-screen");
         animateBar();
-        setMsg("Processing " + students.length + " student(s)...");
-
-        // Try Flask backend first, fallback to client-side simulation
         try {
-          const csvContent = buildCSV(students);
-          const blob = new Blob([csvContent], { type: "text/csv" });
-          const file = new File([blob], "manual_input.csv", {
-            type: "text/csv",
-          });
+          const csv =
+            REQ.join(",") +
+            "\n" +
+            students
+              .map((s) => REQ.map((c) => s[c] ?? "").join(","))
+              .join("\n");
+          const f = new File([csv], "manual.csv", { type: "text/csv" });
           const fd = new FormData();
-          fd.append("file", file);
+          fd.append("file", f);
           setMsg("Sending to model...");
           const res = await fetch("/predict", { method: "POST", body: fd });
           const data = await res.json();
@@ -2262,32 +3176,17 @@
           populate(data);
           showScreen("dashboard-screen");
         } catch (e) {
-          // Client-side simulation fallback
-          setMsg("Running local prediction...");
+          setMsg("Running local simulation...");
           await sleep(600);
-          const simData = simulatePrediction(students);
-          populate(simData);
+          populate(simulatePrediction(students));
           showScreen("dashboard-screen");
-          showToast(
-            "Using simulation (Flask offline). Results are estimated.",
-            "success",
-          );
+          showToast("Flask offline — simulation used.", "success");
         }
       }
 
-      function buildCSV(students) {
-        const header =
-          "Student_ID,Attendance,Internal_Marks,Backlogs,Fee_Pending,LMS_Usage,Semester_Result,Scholarship";
-        const rows = students.map(
-          (s) =>
-            `${s.Student_ID},${s.Attendance},${s.Internal_Marks},${s.Backlogs},${s.Fee_Pending},${s.LMS_Usage},${s.Semester_Result},${s.Scholarship}`,
-        );
-        return [header, ...rows].join("\n");
-      }
-
-      // Simulation model (when Flask is offline)
+      // ========== SIMULATION MODEL ==========
       function simulatePrediction(students) {
-        const FEAT_IMPORTANCE = [
+        const FEAT = [
           { Feature: "Attendance", Importance: 28.4 },
           { Feature: "Backlogs", Importance: 22.1 },
           { Feature: "Fee Pending", Importance: 18.7 },
@@ -2296,102 +3195,63 @@
           { Feature: "Internal Marks", Importance: 4.6 },
           { Feature: "Scholarship", Importance: 2.2 },
         ];
-
-        const lmsMap = { High: 85, Medium: 50, Low: 15 };
+        const lmsN = { High: 85, Medium: 50, Low: 15 };
         const result = students.map((s, idx) => {
-          const lmsNum = lmsMap[s.LMS_Usage] || 50;
-          // Weighted risk score
-          let score = 0;
-          score += (100 - s.Attendance) * 0.3;
-          score += Math.min(s.Backlogs * 8, 40) * 0.22;
-          score += Math.min(s.Fee_Pending / 500, 40) * 0.19;
-          score +=
+          const l = lmsN[s.LMS_Usage] || 50;
+          let sc =
+            (100 - s.Attendance) * 0.3 +
+            Math.min(s.Backlogs * 8, 40) * 0.22 +
+            Math.min(s.Fee_Pending / 500, 40) * 0.19 +
             (s.Semester_Result === "Fail"
               ? 30
               : s.Semester_Result === "Pending"
                 ? 15
-                : 0) * 0.14;
-          score += (100 - lmsNum) * 0.1;
-          score += (100 - s.Internal_Marks) * 0.05;
-          score -= s.Scholarship * 10;
-          score = Math.max(5, Math.min(96, score + (Math.random() * 6 - 3)));
-
-          let risk;
-          const isIndependent =
+                : 0) *
+              0.14 +
+            (100 - l) * 0.1 +
+            (100 - s.Internal_Marks) * 0.05 -
+            s.Scholarship * 10;
+          sc = Math.max(5, Math.min(96, sc + (Math.random() * 6 - 3)));
+          const isInd =
             s.Attendance < 60 && s.Internal_Marks > 75 && s.Backlogs === 0;
-          if (isIndependent) risk = "Independent Performer";
-          else if (score >= 62) risk = "High Risk";
-          else if (score >= 38) risk = "Medium Risk";
-          else risk = "Low Risk";
-
+          const risk = isInd
+            ? "Independent Performer"
+            : sc >= 62
+              ? "High Risk"
+              : sc >= 38
+                ? "Medium Risk"
+                : "Low Risk";
+          const numId =
+            Number(String(s.Student_ID).replace(/\D/g, "")) || idx + 101;
           return {
-            Student_ID: isNaN(s.Student_ID)
-              ? idx + 101
-              : Number(s.Student_ID.toString().replace(/\D/g, "")) || idx + 101,
+            Student_ID: numId,
             _sid_label: s.Student_ID,
             Attendance: s.Attendance,
             Internal_Marks: s.Internal_Marks,
             Backlogs: s.Backlogs,
             Fee_Pending: s.Fee_Pending,
-            LMS_Usage: lmsNum,
+            LMS_Usage: l,
             Scholarship: s.Scholarship,
-            Drop_Probability: Math.round(score),
+            Drop_Probability: Math.round(sc),
             Risk: risk,
           };
         });
-
-        const high = result.filter((s) => s.Risk === "High Risk").length;
-        const med = result.filter((s) => s.Risk === "Medium Risk").length;
-        const low = result.filter((s) => s.Risk === "Low Risk").length;
-        const ind = result.filter(
-          (s) => s.Risk === "Independent Performer",
-        ).length;
-
         return {
           students: result,
           total: result.length,
-          high_risk: high,
-          medium_risk: med,
-          low_risk: low,
-          independent_performers: ind,
-          feature_importance: FEAT_IMPORTANCE,
+          high_risk: result.filter((s) => s.Risk === "High Risk").length,
+          medium_risk: result.filter((s) => s.Risk === "Medium Risk").length,
+          low_risk: result.filter((s) => s.Risk === "Low Risk").length,
+          independent_performers: result.filter(
+            (s) => s.Risk === "Independent Performer",
+          ).length,
+          feature_importance: FEAT,
         };
       }
 
-      // ===== CSV UPLOAD =====
-      async function uploadAndPredict() {
-        const file = inp.files[0] || inp._file;
-        if (!file) {
-          showToast("No file selected!");
-          return;
-        }
-        showScreen("loading-screen");
-        animateBar();
-        const fd = new FormData();
-        fd.append("file", file);
-        try {
-          setMsg("Sending data to model...");
-          const res = await fetch("/predict", { method: "POST", body: fd });
-          const data = await res.json();
-          if (data.error) {
-            showToast(data.error);
-            showScreen("upload-screen");
-            return;
-          }
-          setMsg("Building your dashboard...");
-          await sleep(350);
-          populate(data);
-          showScreen("dashboard-screen");
-        } catch (e) {
-          showToast("Cannot connect to Flask. Is app.py running?");
-          showScreen("upload-screen");
-        }
-      }
-
-      // ===== POPULATE DASHBOARD =====
+      // ========== POPULATE DASHBOARD ==========
       function populate(data) {
         allStudents = data.students;
-        featData = data.feature_importance;
         document.getElementById("timestamp").textContent =
           "Analyzed: " + new Date().toLocaleString();
         counter("s-total", data.total);
@@ -2412,25 +3272,24 @@
         renderTable(data.students);
         populateInsights(data);
       }
-
-      function drawDonut(high, med, low, ind, total) {
-        const canvas = document.getElementById("donut");
-        const ctx = canvas.getContext("2d");
-        const cx = 110,
+      function drawDonut(hi, med, lo, ind, tot) {
+        const cv = document.getElementById("donut"),
+          ctx = cv.getContext("2d"),
+          cx = 110,
           cy = 110,
           r = 85,
           sw = 22;
         const segs = [
-          { v: high, c: "#ef4444", l: "High Risk" },
+          { v: hi, c: "#ef4444", l: "High Risk" },
           { v: med, c: "#f59e0b", l: "Medium Risk" },
-          { v: low, c: "#10b981", l: "Low Risk" },
+          { v: lo, c: "#10b981", l: "Low Risk" },
           { v: ind, c: "#a855f7", l: "Independent" },
         ];
-        const sum = segs.reduce((a, b) => a + b.v, 0) || 1;
-        const gap = 0.04,
-          frames = 55;
-        const draw = (frame) => {
-          const p = frame / frames;
+        const sum = segs.reduce((a, b) => a + b.v, 0) || 1,
+          gap = 0.04,
+          fr = 55;
+        const draw = (f) => {
+          const p = f / fr;
           ctx.clearRect(0, 0, 220, 220);
           ctx.beginPath();
           ctx.arc(cx, cy, r, 0, Math.PI * 2);
@@ -2452,10 +3311,10 @@
             ctx.stroke();
             a += sl;
           });
-          if (frame < frames) requestAnimationFrame(() => draw(frame + 1));
+          if (f < fr) requestAnimationFrame(() => draw(f + 1));
         };
         draw(0);
-        const hp = total ? Math.round((high / total) * 100) : 0;
+        const hp = tot ? Math.round((hi / tot) * 100) : 0;
         document.getElementById("donut-center").innerHTML =
           `<div style="font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:#ef4444">${hp}%</div><div style="font-size:.65rem;color:#6b7280;margin-top:2px">HIGH RISK</div>`;
         document.getElementById("donut-legend").innerHTML = segs
@@ -2465,9 +3324,8 @@
           )
           .join("");
       }
-
       function drawFeatBars(feats) {
-        const max = feats[0]?.Importance || 1;
+        const mx = feats[0]?.Importance || 1;
         document.getElementById("feat-bars").innerHTML = feats
           .map(
             (f, i) =>
@@ -2478,22 +3336,21 @@
           () =>
             feats.forEach((f, i) => {
               const el = document.getElementById("bf" + i);
-              if (el) el.style.width = (f.Importance / max) * 100 + "%";
+              if (el) el.style.width = (f.Importance / mx) * 100 + "%";
             }),
           100,
         );
       }
-
       function drawDept(students) {
-        const depts = ["CS", "IT", "ECE", "Mech", "Civil"];
-        const colors = ["#4f8ef7", "#7c3aed", "#ec4899", "#f59e0b", "#10b981"];
+        const depts = ["CS", "IT", "ECE", "Mech", "Civil"],
+          colors = ["#4f8ef7", "#7c3aed", "#ec4899", "#f59e0b", "#10b981"];
         const stats = depts.map(() => ({ total: 0, high: 0 }));
         students.forEach((s) => {
-          const idx = (Number(s.Student_ID) - 1) % depts.length;
-          stats[idx].total++;
-          if (s.Risk === "High Risk") stats[idx].high++;
+          const i = (Number(s.Student_ID) - 1) % depts.length;
+          stats[i].total++;
+          if (s.Risk === "High Risk") stats[i].high++;
         });
-        const maxH = Math.max(...stats.map((d) => d.high), 1);
+        const mh = Math.max(...stats.map((d) => d.high), 1);
         document.getElementById("dept-chart").innerHTML = depts
           .map(
             (d, i) =>
@@ -2504,22 +3361,21 @@
           () =>
             depts.forEach((_, i) => {
               const el = document.getElementById("db" + i);
-              if (el) el.style.width = (stats[i].high / maxH) * 100 + "%";
+              if (el) el.style.width = (stats[i].high / mh) * 100 + "%";
             }),
           100,
         );
       }
-
       function drawTopRisk(students) {
         const top = [...students]
           .sort((a, b) => b.Drop_Probability - a.Drop_Probability)
           .slice(0, 7);
         document.getElementById("top-risk").innerHTML = top
           .map((s) => {
-            const c = riskColor(s.Risk),
-              bc = badgeClass(s.Risk);
-            const label = s._sid_label || "#" + s.Student_ID;
-            return `<div class="risk-row" onclick="openExplainer(${s.Student_ID})"><span class="risk-id">${label}</span><div class="risk-bar-wrap"><div class="risk-bar-bg"><div class="risk-bar-inner" style="background:${c}" data-w="${s.Drop_Probability}%"></div></div></div><span class="risk-prob" style="color:${c}">${s.Drop_Probability}%</span><span class="badge ${bc}">${s.Risk}</span></div>`;
+            const c = rc(s.Risk),
+              bc = bcl(s.Risk),
+              lb = s._sid_label || "#" + s.Student_ID;
+            return `<div class="risk-row" onclick="openExplainer(${s.Student_ID})"><span class="risk-id">${lb}</span><div class="risk-bar-wrap"><div class="risk-bar-bg"><div class="risk-bar-inner" style="background:${c}" data-w="${s.Drop_Probability}%"></div></div></div><span class="risk-prob" style="color:${c}">${s.Drop_Probability}%</span><span class="badge ${bc}">${s.Risk}</span></div>`;
           })
           .join("");
         setTimeout(
@@ -2530,24 +3386,16 @@
           200,
         );
       }
-
       function renderTable(students) {
         document.getElementById("tbody").innerHTML = students
           .map((s, i) => {
-            const c = riskColor(s.Risk),
-              bc = badgeClass(s.Risk);
-            const label = s._sid_label || "#" + s.Student_ID;
-            return `<tr style="animation-delay:${Math.min(i, 25) * 0.025}s" onclick="openExplainer(${s.Student_ID})">
-            <td><strong style="font-family:'Syne',sans-serif">${label}</strong></td>
-            <td>${s.Attendance}%</td><td>${s.Internal_Marks ?? "-"}</td><td>${s.Backlogs}</td><td>${s.Fee_Pending}</td>
-            <td><span class="mini-bar"><span class="mini-fill" style="width:${s.Drop_Probability}%;background:${c}"></span></span><span style="color:${c};font-weight:600">${s.Drop_Probability}%</span></td>
-            <td><span class="badge ${bc}">${s.Risk}</span></td>
-            <td><button class="explain-btn" onclick="event.stopPropagation();openExplainer(${s.Student_ID})">Explain →</button></td>
-          </tr>`;
+            const c = rc(s.Risk),
+              bc = bcl(s.Risk),
+              lb = s._sid_label || "#" + s.Student_ID;
+            return `<tr onclick="openExplainer(${s.Student_ID})"><td><strong style="font-family:'Syne',sans-serif">${lb}</strong></td><td>${s.Attendance}%</td><td>${s.Internal_Marks ?? "-"}</td><td>${s.Backlogs}</td><td>${s.Fee_Pending}</td><td><span class="mini-bar"><span class="mini-fill" style="width:${s.Drop_Probability}%;background:${c}"></span></span><span style="color:${c};font-weight:600">${s.Drop_Probability}%</span></td><td><span class="badge ${bc}">${s.Risk}</span></td><td><button class="explain-btn" onclick="event.stopPropagation();openExplainer(${s.Student_ID})">Explain →</button></td></tr>`;
           })
           .join("");
       }
-
       function filterByRisk(risk) {
         showTab("students");
         document.getElementById("risk-filter").value = risk;
@@ -2555,8 +3403,8 @@
         filterTable();
       }
       function filterTable() {
-        const q = document.getElementById("search-inp").value.toLowerCase();
-        const r = document.getElementById("risk-filter").value;
+        const q = document.getElementById("search-inp").value.toLowerCase(),
+          r = document.getElementById("risk-filter").value;
         renderTable(
           allStudents.filter(
             (s) =>
@@ -2566,15 +3414,14 @@
           ),
         );
       }
-
       function openExplainer(id) {
         const s = allStudents.find((x) => x.Student_ID === id);
         if (!s) return;
-        const c = riskColor(s.Risk),
-          bc = badgeClass(s.Risk);
-        const label = s._sid_label || "#" + s.Student_ID;
+        const c = rc(s.Risk),
+          bc = bcl(s.Risk),
+          lb = s._sid_label || "#" + s.Student_ID;
         document.getElementById("exp-title").textContent =
-          label + " — Detailed Analysis";
+          lb + " — Detailed Analysis";
         document.getElementById("exp-num").textContent =
           s.Drop_Probability + "%";
         document.getElementById("exp-num").style.color = c;
@@ -2596,11 +3443,10 @@
         ];
         document.getElementById("exp-factors").innerHTML = factors
           .map((f) => {
-            const pct = Math.min((f.v / f.max) * 100, 100);
-            const rPct = f.inv ? 100 - pct : pct;
-            const col =
-              rPct > 66 ? "#ef4444" : rPct > 33 ? "#f59e0b" : "#10b981";
-            return `<div class="exp-factor"><span class="exp-f-lbl">${f.l}</span><div class="exp-f-bar"><div class="exp-f-fill" style="background:${col}" data-w="${rPct}%"></div></div><span class="exp-f-val" style="color:${col}">${f.v}${f.u}</span></div>`;
+            const pct = Math.min((f.v / f.max) * 100, 100),
+              rP = f.inv ? 100 - pct : pct,
+              col = rP > 66 ? "#ef4444" : rP > 33 ? "#f59e0b" : "#10b981";
+            return `<div class="exp-factor"><span class="exp-f-lbl">${f.l}</span><div class="exp-f-bar"><div class="exp-f-fill" style="background:${col}" data-w="${rP}%"></div></div><span class="exp-f-val" style="color:${col}">${f.v}${f.u}</span></div>`;
           })
           .join("");
         const v =
@@ -2620,7 +3466,7 @@
                 ? {
                     bg: "rgba(168,85,247,.1)",
                     c: "#a855f7",
-                    t: "⭐ Independent Performer! Low attendance but strong academics. No dropout risk — this is a self-motivated learner.",
+                    t: "⭐ Independent Performer! Low attendance but strong academics. Self-motivated learner, low dropout risk.",
                   }
                 : {
                     bg: "rgba(16,185,129,.1)",
@@ -2640,43 +3486,40 @@
           200,
         );
       }
-
       function closeModal(e) {
         if (e.target.id === "exp-modal")
           document.getElementById("exp-modal").classList.add("hidden");
       }
-
       function populateInsights(data) {
         const top = data.feature_importance[0];
         document.getElementById("ins-driver").textContent =
           top.Feature +
           " is the strongest predictor with " +
           top.Importance.toFixed(1) +
-          "% importance. Directly linked to most dropout cases.";
+          "% importance.";
         document.getElementById("ins-urgent").textContent =
           data.high_risk +
-          " students have above 60% dropout probability and need immediate counseling, financial support, or backlog clearance assistance.";
+          " students have >60% dropout probability and need immediate attention.";
         const hp = data.total
           ? Math.round((data.high_risk / data.total) * 100)
           : 0;
         document.getElementById("ins-ratio").textContent =
           hp +
-          "% of your cohort is high-risk — " +
+          "% of cohort is high-risk — " +
           data.high_risk +
-          " out of " +
+          " of " +
           data.total +
-          " students. Safe benchmark is under 15%.";
-        const buckets = Array(20).fill(0);
+          ". Safe benchmark: <15%.";
+        const bkts = Array(20).fill(0);
         data.students.forEach((s) => {
-          const idx = Math.min(Math.floor(s.Drop_Probability / 5), 19);
-          buckets[idx]++;
+          bkts[Math.min(Math.floor(s.Drop_Probability / 5), 19)]++;
         });
-        const maxB = Math.max(...buckets, 1);
-        document.getElementById("prob-dist").innerHTML = buckets
+        const mb = Math.max(...bkts, 1);
+        document.getElementById("prob-dist").innerHTML = bkts
           .map((cnt, i) => {
             const pct = i * 5,
-              col = pct >= 60 ? "#ef4444" : pct >= 40 ? "#f59e0b" : "#10b981";
-            const h = Math.max((cnt / maxB) * 70, cnt > 0 ? 4 : 0);
+              col = pct >= 60 ? "#ef4444" : pct >= 40 ? "#f59e0b" : "#10b981",
+              h = Math.max((cnt / mb) * 70, cnt > 0 ? 4 : 0);
             return `<div class="p-bar" style="background:${col};opacity:.75;height:0px" data-h="${h}px" title="${pct}-${pct + 5}%: ${cnt}"></div>`;
           })
           .join("");
@@ -2689,23 +3532,24 @@
         );
       }
 
+      // UTILS
       function showTab(id) {
         ["overview", "students", "insights"].forEach((t) =>
           document
             .getElementById("tab-" + t)
             .classList.toggle("hidden", t !== id),
         );
-        document.querySelectorAll(".tab-btn").forEach((b) => {
-          b.classList.toggle(
-            "active",
-            (id === "overview" && b.textContent === "Overview") ||
-              (id === "students" && b.textContent === "All Students") ||
-              (id === "insights" && b.textContent === "Insights"),
+        document
+          .querySelectorAll(".tab-btn")
+          .forEach((b) =>
+            b.classList.toggle(
+              "active",
+              (id === "overview" && b.textContent === "Overview") ||
+                (id === "students" && b.textContent === "All Students") ||
+                (id === "insights" && b.textContent === "Insights"),
+            ),
           );
-        });
       }
-
-      // UTILS
       function showScreen(id) {
         [
           "landing-screen",
@@ -2717,13 +3561,16 @@
         );
       }
       function goToUpload() {
-        const l = document.getElementById("landing-screen");
-        l.classList.add("screen-fade-out");
+        document
+          .getElementById("landing-screen")
+          .classList.add("screen-fade-out");
         setTimeout(() => showScreen("upload-screen"), 380);
       }
       function resetApp() {
         showScreen("upload-screen");
-        document.getElementById("file-info").classList.add("hidden");
+        document.getElementById("file-section").classList.add("hidden");
+        document.getElementById("vp-container").innerHTML = "";
+        fixedRows = null;
         allStudents = [];
       }
       function counter(id, target) {
@@ -2754,9 +3601,10 @@
         const el = document.getElementById("toast");
         document.getElementById("toast-msg").textContent = msg;
         el.className = "toast" + (type === "success" ? " success" : "");
+        el.classList.remove("hidden");
         setTimeout(() => el.classList.add("hidden"), 5000);
       }
-      function riskColor(r) {
+      function rc(r) {
         return r === "High Risk"
           ? "#ef4444"
           : r === "Medium Risk"
@@ -2765,7 +3613,7 @@
               ? "#10b981"
               : "#a855f7";
       }
-      function badgeClass(r) {
+      function bcl(r) {
         return r === "High Risk"
           ? "b-high"
           : r === "Medium Risk"
